@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">        
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1">
+	<meta content="Indonesian" name="language">
+	<meta content="ID-JK" name="geo.region">
+	<meta content="Jakarta" name="geo.placename">
+	<meta name="theme-color" content="#303840">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+</head>
+<body>
+	<style>
+	html, body
+	{
+		margin: 0;
+		padding: 0;
+	}
+	#root
+	{
+		position: relative;
+		z-index: 0;
+		background-color: #eeeeee;
+	}
+	/*Menu Bar - IMPORTANT*/
+	.jalantikus-menu-bar
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 65px;
+		box-shadow: 0 1px 4px #666;
+		background: #ce0a46;
+		background: -webkit-linear-gradient(left, #ce0a46 , #e98125);
+		background: -o-linear-gradient(right, #ce0a46, #e98125);
+		background: -moz-linear-gradient(right, #ce0a46, #e98125);
+		background: linear-gradient(to right, #ce0a46 , #e98125);
+		z-index: 999;
+	}
+	.jalantikus-menu-bar-placeholder
+	{
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 65px;
+		background-color: transparent;
+	}
+	.jalantikus-logo
+	{
+		width: 250px;
+		height: 65px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: url(assets/images/jalantikus-logo-white.png);
+		background-size: 200px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.jalantikus-search
+	{
+		width: 65px;
+		height: 65px;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		-webkit-mask-image: url(assets/images/search.png);
+		mask-image: url(assets/images/search.png);
+		-webkit-mask-size: 24px 24px;
+		mask-size: 24px 24px;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-position: center center;
+		mask-position: center center;
+		background-color: #fff;
+	}
+	.jalantikus-menu-list
+	{
+		display: block;
+		margin: 0;
+		padding-left: 300px;
+	}
+	.jalantikus-menu-list .jalantikus-menu-item
+	{
+		display: inline-block;
+		position: relative;
+		font-family: "Oswald";
+		font-size: 16px;
+		font-weight: 400;
+		color: #fff;
+		height: 65px;
+		line-height: 66px;
+		padding: 0 25px;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+	}
+	.jalantikus-menu-list .jalantikus-menu-item:hover
+	{
+		background-color: rgba(255,255,255,0.1)
+	}
+	.link-overlay
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	/*Menu Bar - IMPORTANT*/
+	/*Featured News - IMPORTANT*/
+	.featured-news .featured-news-lg, .featured-news .featured-news-sm
+	{
+		position: relative;
+		display: block;
+	}
+	.featured-news .featured-news-lg
+	{
+		width: 100%;
+		height: 440px;
+	}
+	.featured-news .featured-news-sm
+	{
+		float: left;
+		width: 50%;
+		height: 220px;
+	}
+	.featured-news .news-image {
+		height: 100%;
+		width: 100%;
+		text-align:center;
+		line-height:440px;
+		overflow:hidden;
+	}
+	/*Featured News - IMPORTANT*/
+	/*Featured News - Styling*/
+	.featured-news .news-image img 
+	{
+		height: 100%;
+		margin: 0 -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: -1;
+	}
+	.featured-news .news-detail
+	{
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    padding: 15px;
+	    pointer-events: none;
+	}
+	.featured-news .news-detail .title
+	{
+		font-family: "Oswald";
+		font-weight: 700;
+		text-shadow: 2px 2px #666;
+		margin-bottom: 10px;
+	}
+	.featured-news .featured-news-lg .news-detail .title
+	{
+		font-size: 32px;
+	}
+	.featured-news .featured-news-sm .news-detail .title
+	{
+		font-size: 20px;
+	}
+	.news-detail .author
+	{
+		font-family: "Roboto";
+		text-shadow: 1px 1px #999;
+	}
+	.featured-news .featured-news-lg .news-detail .author
+	{
+		font-size: 12px;
+	}
+	.featured-news .featured-news-sm .news-detail .author
+	{
+		font-size: 11px;
+	}
+	/*Featured News - Styling*/
+	/*Category - Styling*/
+	.featured-news .category
+	{
+		width: 80px;
+		height: 20px;
+		font-family: "Roboto";
+		font-size: 10px;
+		line-height: 20px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.category.tips
+	{
+		background-color: #ff9600
+	}
+	/*Category - Styling*/
+	/*All News - IMPORTANT*/
+	.all-news
+	{
+		margin-right: 20px;
+		margin-left: 20px;
+		background-color: #fff;
+		min-height: 200px;
+		padding-right: 340px;
+		border-right: 1px solid #ddd;
+	}
+	.main-content
+	{
+		padding:20px;
+	}
+	.news-content
+	{
+		position: relative;
+	}
+	.news-title
+	{
+		position: relative;
+		display: inline-block;
+		font-family: "Oswald";
+		font-size: 22px;
+		padding-right: 20px;
+		background-color: #fff;
+	}
+	.news-content:before
+	{
+		position: absolute;
+		content: "";
+		top: 13px;
+		left: 0;
+		height: 5px;
+		width: 100%;
+		background-color: #d1d1d1;
+	}
+	/*All News - IMPORTANT*/
+	/*Box - IMPORTANT*/
+	.box-1, .box-2, .box-3, .box-4, .box-5
+	{
+		position: relative;
+		display: inline-block;
+		float: left;
+	}
+	.box-1
+	{
+		width: 100%;
+	}
+	.box-2
+	{
+		width: 87.5%;
+	}
+	.box-3
+	{
+		width: 75%;
+	}
+	.box-4
+	{
+		width: 62.5%;
+	}
+	.box-5
+	{
+		width: 50%;
+	}
+	.box-6
+	{
+		width: 37.5%;
+	}
+	.box-7
+	{
+		width: 25%;
+	}
+	.box-8
+	{
+		width: 12.5%;
+	}
+	.clear
+	{
+		clear: both;
+	}
+	/*Box - IMPORTANT*/
+	/*Color - Styling*/
+	.color.white
+	{
+		color: #fff;
+	}
+	.color.black
+	{
+		color: #000;
+	}
+	.color.gray
+	{
+		color: #b2b2b2;
+	}
+	/*Color - Styling*/
+	/*Overlay Menu - Styling*/
+	.news-image:before, .news-image:after
+	{
+		content:"";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		-webkit-transition:0.2s;
+		transition:0.2s;
+	}
+	.news-image.tips:after
+	{
+		background-color: rgba(206,10,10,0.25);
+	}
+	.news-image.news:after
+	{
+		background-color: rgba(0,125,21,0.25);
+	}
+	.news-image.gokil:after
+	{
+		background-color: rgba(71,0,125,0.25);
+	}
+	.news-image.gadget:after
+	{
+		background-color: rgba(0,109,125,0.25);
+	}
+	.news-image.apps:after
+	{
+		background-color: rgba(125,55,0,0.25);
+	}
+	.news-image:before
+	{
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) , transparent);
+		background: -o-linear-gradient(top, rgba(0,0,0,0.5) , transparent);
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.5) , transparent);
+		background: linear-gradient(to top, rgba(0,0,0,0.5) , transparent);
+	}
+	.news-image:hover:after
+	{
+		opacity: 0;
+	}
+	/*Overlay Menu - Styling*/
+	/*Ads - Styling*/
+	.ad-container
+	{
+		display: block;
+		width: 728px;
+		height: 90px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*Ads - Styling*/
+	</style>
+	<div class="root" id="root">
+		<div class="jalantikus-menu-bar">
+			<div class="jalantikus-logo">
+				<a href="#" class="link-overlay"> </a>
+			</div>
+			<div class="jalantikus-menu">
+				<ul class="jalantikus-menu-list">
+					<li class="jalantikus-menu-item">
+						APPS
+						<a href="#" class="link-overlay"> </a>
+					</li><li class="jalantikus-menu-item">
+						GAMES
+						<a href="#" class="link-overlay"> </a>
+					</li><li class="jalantikus-menu-item">
+						TIPS & TRIK
+						<a href="#" class="link-overlay"> </a>
+					</li><li class="jalantikus-menu-item">
+						GADGET
+						<a href="#" class="link-overlay"> </a>
+					</li><li class="jalantikus-menu-item">
+						GOKIL
+						<a href="#" class="link-overlay"> </a>
+					</li><li class="jalantikus-menu-item">
+						TECH NEWS
+						<a href="#" class="link-overlay"> </a>
+					</li>
+				</ul>
+			</div>
+			<div class="jalantikus-search">
+				<a href="javascript:;" class="jalantikus-search-icon link-overlay"></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="jalantikus-menu-bar-placeholder">
+		</div>
+
+		<div class="jalantikus-content">
+			<div class="featured-news">
+				<div class="box-5">
+					<div class="featured-news-lg">
+						<a href="#" class="link-overlay">
+							<div class="news-image tips">
+								<img src="assets/Banner/samsung-vs-apple.jpeg">
+							</div>
+							<div class="news-detail">
+								<div class="category tips color white">
+									TIPS & TRIK
+								</div>
+								<div class="title color white">
+									Samsung Jawara, Oppo Menggeser Lenovo. Apa kabar Apple?
+								</div>
+								<div class="author color gray">
+									OLEH <span class="color white">AMRILLAH WARDI</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="box-5">
+					<div class="featured-news-sm">
+						<a href="#" class="link-overlay">
+							<div class="news-image news">
+								<img src="assets/Banner/samsung-vs-apple.jpeg">
+							</div>
+							<div class="news-detail">
+								<div class="category news color white">
+									TECH NEWS
+								</div>
+								<div class="title color white">
+									Samsung Jawara, Oppo Menggeser Lenovo. Apa kabar Apple?
+								</div>
+								<div class="author color gray">
+									OLEH <span class="color white">AMRILLAH WARDI</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="featured-news-sm">
+						<a href="#" class="link-overlay">
+							<div class="news-image gokil">
+								<img src="assets/Banner/samsung-vs-apple.jpeg">
+							</div>
+							<div class="news-detail">
+								<div class="category gokil color white">
+									GOKIL
+								</div>
+								<div class="title color white">
+									Samsung Jawara, Oppo Menggeser Lenovo. Apa kabar Apple?
+								</div>
+								<div class="author color gray">
+									OLEH <span class="color white">AMRILLAH WARDI</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="featured-news-sm">
+						<a href="#" class="link-overlay">
+							<div class="news-image gadget">
+								<img src="assets/Banner/samsung-vs-apple.jpeg">
+							</div>
+							<div class="news-detail">
+								<div class="category gadget color white">
+									GADGET
+								</div>
+								<div class="title color white">
+									Samsung Jawara, Oppo Menggeser Lenovo. Apa kabar Apple?
+								</div>
+								<div class="author color gray">
+									OLEH <span class="color white">AMRILLAH WARDI</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="featured-news-sm">
+						<a href="#" class="link-overlay">
+							<div class="news-image apps">
+								<img src="assets/Banner/samsung-vs-apple.jpeg">
+							</div>
+							<div class="news-detail">
+								<div class="category gadget color white">
+									GADGET
+								</div>
+								<div class="title color white">
+									Samsung Jawara, Oppo Menggeser Lenovo. Apa kabar Apple?
+								</div>
+								<div class="author color gray">
+									OLEH <span class="color white">AMRILLAH WARDI</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ad-container">
+			</div>
+			<div class="all-news">
+				<div class="main-content">
+					<div class="wajib-coba news-content">
+						<div class="news-title color black">
+							WAJIB <strong>COBA</strong>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="banyak-dibicarakan news-content">
+						<div class="news-title color black">
+							BANYAK <strong>DIBICARAKAN</strong>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
