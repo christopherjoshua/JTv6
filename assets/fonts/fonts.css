@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Thin Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox UltraLight Italic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Light Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Medium Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox SemiBold Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox';
+    src: url('Shentox/Shentox Bold Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
