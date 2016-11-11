@@ -18,6 +18,8 @@
 	{
 		margin: 0;
 		padding: 0;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 	#root
 	{
@@ -25,6 +27,66 @@
 		z-index: 0;
 		background-color: #eeeeee;
 	}
+	/*Box - IMPORTANT*/
+	.box-1, .box-2, .box-3, .box-4, .box-5, .box-1, .box-6, .box-7, .box-8, .box-9, .box-10, .box-11, .box-12
+	{
+		position: relative;
+		display: inline-block;
+		float: left;
+	}
+	.box-1
+	{
+		width: 8.33%%;
+	}
+	.box-2
+	{
+		width: 16.66%;
+	}
+	.box-3
+	{
+		width: 25%;
+	}
+	.box-4
+	{
+		width: 33.33%;
+	}
+	.box-5
+	{
+		width: 41.66%;
+	}
+	.box-6
+	{
+		width: 50%;
+	}
+	.box-7
+	{
+		width: 58.33%;
+	}
+	.box-8
+	{
+		width: 66.66%;
+	}
+	.box-9
+	{
+		width: 75%;
+	}
+	.box-10
+	{
+		width: 83.33%;
+	}
+	.box-11
+	{
+		width: 91.66%;
+	}
+	.box-12
+	{
+		width: 100%;
+	}
+	.clear
+	{
+		clear: both;
+	}
+	/*Box - IMPORTANT*/
 	/*Menu Bar - IMPORTANT*/
 	.jalantikus-menu-bar
 	{
@@ -33,7 +95,7 @@
 		left: 0;
 		width: 100%;
 		height: 65px;
-		box-shadow: 0 1px 4px #666;
+		box-shadow: 0 0px 7px #646464;
 		background: #ce0a46;
 		background: -webkit-linear-gradient(left, #ce0a46 , #e98125);
 		background: -o-linear-gradient(right, #ce0a46, #e98125);
@@ -111,6 +173,12 @@
 		top: 0;
 		right: 0;
 		bottom: 0;
+		z-index: 1;
+		text-decoration: none;
+	}
+	.jalantikus-content
+	{
+		padding-bottom: 20px;
 	}
 	/*Menu Bar - IMPORTANT*/
 	/*Featured News - IMPORTANT*/
@@ -123,12 +191,13 @@
 	{
 		width: 100%;
 		height: 440px;
+		display: block;
 	}
 	.featured-news .featured-news-sm
 	{
 		float: left;
-		width: 50%;
 		height: 220px;
+		display: block;
 	}
 	.featured-news .news-image {
 		height: 100%;
@@ -159,7 +228,7 @@
 	{
 		font-family: "Shentox";
 		font-weight: 700;
-		text-shadow: 2px 2px #666;
+		text-shadow: 2px 2px #666, 0px 0px 1px #fff;
 		margin-bottom: 10px;
 	}
 	.featured-news .featured-news-lg .news-detail .title
@@ -185,7 +254,7 @@
 	}
 	/*Featured News - Styling*/
 	/*Category - Styling*/
-	.featured-news .category
+	.category
 	{
 		width: 80px;
 		height: 20px;
@@ -211,6 +280,14 @@
 	{
 		background-color: #ff00fc
 	}
+	.category.giveaway
+	{
+		background-color: #0090ff;
+	}
+	.category.intermezzo
+	{
+		background-color: #a800ff;
+	}
 	/*Category - Styling*/
 	/*All News - IMPORTANT*/
 	.all-news
@@ -222,6 +299,7 @@
 		min-height: 200px;
 		padding-right: 340px;
 		border-right: 1px solid #ddd;
+		box-sizing: border-box;
 	}
 	.main-content
 	{
@@ -251,50 +329,6 @@
 		background-color: #d1d1d1;
 	}
 	/*All News - IMPORTANT*/
-	/*Box - IMPORTANT*/
-	.box-1, .box-2, .box-3, .box-4, .box-5
-	{
-		position: relative;
-		display: inline-block;
-		float: left;
-	}
-	.box-1
-	{
-		width: 100%;
-	}
-	.box-2
-	{
-		width: 87.5%;
-	}
-	.box-3
-	{
-		width: 75%;
-	}
-	.box-4
-	{
-		width: 62.5%;
-	}
-	.box-5
-	{
-		width: 50%;
-	}
-	.box-6
-	{
-		width: 37.5%;
-	}
-	.box-7
-	{
-		width: 25%;
-	}
-	.box-8
-	{
-		width: 12.5%;
-	}
-	.clear
-	{
-		clear: both;
-	}
-	/*Box - IMPORTANT*/
 	/*Color - Styling*/
 	.color.white
 	{
@@ -310,7 +344,7 @@
 	}
 	/*Color - Styling*/
 	/*Overlay Menu - Styling*/
-	.news-image:before, .news-image:after
+	.featured-news .news-image:before, .featured-news .news-image:after
 	{
 		content:"";
 		position: absolute;
@@ -354,6 +388,127 @@
 		opacity: 0;
 	}
 	/*Overlay Menu - Styling*/
+	.news-container
+	{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	/*Banyak Dibicarakan - IMPORTANT*/
+	.banyak-dibicarakan .news-item
+	{
+		position: relative;
+		width: 221px;
+		height: 166px;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	.banyak-dibicarakan .news-item:nth-child(4n)
+	{
+		margin-right: 0px;
+	}
+	.banyak-dibicarakan .news-item:nth-child(n+5)
+	{
+		margin-bottom: 0px;
+	}
+	.banyak-dibicarakan .news-image {
+		position: relative;
+		height: 94px;
+		width: 100%;
+		text-align:center;
+		line-height:440px;
+		overflow:hidden;
+	}
+	.banyak-dibicarakan .news-image .category
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+	}
+	/*Banyak Dibicarakan - IMPORTANT*/
+	/*Banyak Dibicarakan - Styling*/
+	.banyak-dibicarakan .news-image img 
+	{
+		height: 100%;
+		width: 100%;
+		margin: 0% -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: -1;
+	}
+	.banyak-dibicarakan .news-detail
+	{
+		margin-top: 10px;
+	}
+	.banyak-dibicarakan .news-detail .title
+	{
+	    font-family: "Roboto";
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 500;
+	} 
+	/*Banyak Dibicarakan - Styling*/
+	/*Wajib Coba - IMPORTANT*/
+	.wajib-coba .news-item
+	{
+		position: relative;
+		width: 188px;
+		height: 80px;
+		float: left;
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+	.wajib-coba .news-image
+	{
+	    width: 60px;
+	    height: 60px;
+	    padding: 10px;
+	}
+	.wajib-coba .news-detail
+	{
+		position: absolute;
+		left: 80px;
+		top: 0;
+		font-family: "Roboto";
+		padding-top: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
+	/*Wajib Coba - IMPORTANT*/
+	/*Wajib Coba - Styling*/
+	.wajib-coba .news-item:nth-child(n+6)
+	{
+		border-bottom: 0px;
+	}
+	.wajib-coba .news-item:nth-child(5n)
+	{
+		border-right: 0px;
+		border-left: 0px;
+	}
+	.wajib-coba .news-image img
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.wajib-coba .news-detail .title
+	{
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 20px;
+		height: 20px;
+		max-width: 100%;
+		overflow: hidden;
+	}
+	.wajib-coba .news-detail .type
+	{
+		font-size: 12px;
+		height: 20px;
+		line-height: 20px;
+		max-width: 100%;
+		overflow: hidden;
+	}
+	/*Wajib Coba - Styling*/
 	/*Ads - Styling*/
 	.ad-container
 	{
@@ -405,7 +560,7 @@
 
 		<div class="jalantikus-content">
 			<div class="featured-news">
-				<div class="box-5">
+				<div class="box-6">
 					<div class="featured-news-lg">
 						<a href="#" class="link-overlay">
 							<div class="news-image tips">
@@ -425,8 +580,8 @@
 						</a>
 					</div>
 				</div>
-				<div class="box-5">
-					<div class="featured-news-sm">
+				<div class="box-6">
+					<div class="featured-news-sm box-6">
 						<a href="#" class="link-overlay">
 							<div class="news-image news">
 								<img src="assets/Banner/samsung-vs-apple.jpeg">
@@ -444,7 +599,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="featured-news-sm">
+					<div class="featured-news-sm box-6">
 						<a href="#" class="link-overlay">
 							<div class="news-image gokil">
 								<img src="assets/Banner/samsung-vs-apple.jpeg">
@@ -462,7 +617,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="featured-news-sm">
+					<div class="featured-news-sm box-6">
 						<a href="#" class="link-overlay">
 							<div class="news-image gadget">
 								<img src="assets/Banner/samsung-vs-apple.jpeg">
@@ -480,7 +635,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="featured-news-sm">
+					<div class="featured-news-sm box-6">
 						<a href="#" class="link-overlay">
 							<div class="news-image apps">
 								<img src="assets/Banner/samsung-vs-apple.jpeg">
@@ -502,6 +657,7 @@
 				<div class="clear"></div>
 			</div>
 			<div class="ad-container">
+				<img src="assets/images/example-ad.png">
 			</div>
 			<div class="all-news">
 				<div class="main-content">
@@ -509,31 +665,325 @@
 						<div class="news-title color black">
 							WAJIB <strong>COBA</strong>
 						</div>
+						<div class="news-container">
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
 						<div class="clear"></div>
 					</div>
 					<div class="banyak-dibicarakan news-content">
 						<div class="news-title color black">
 							BANYAK <strong>DIBICARAKAN</strong>
 						</div>
-						<div class="clear"></div>
+						<div class="news-container">
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image giveaway">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category intermezzo color white">
+											INTERMEZZO
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image intermezzo">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+										<div class="category giveaway color white">
+											GIVEAWAY
+										</div>
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Kurang dari Seminggu, Google Allo Tembus 1 Juta Download Lebih
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
 					</div>
 					<div class="paling-news">
-						<div class="box-5">
-							<div class="banyak-dibicarakan news-content">
+						<div class="box-6 paling-news-item">
+							<div class="paling-laris news-content">
 								<div class="news-title color black">
 									BANYAK <strong>DIBICARAKAN</strong>
 								</div>
 								<div class="clear"></div>
 							</div>
 						</div>
-						<div class="box-5">
-							<div class="banyak-dibicarakan news-content">
+						<div class="box-6 paling-news-item">
+							<div class="paling-unik news-content">
 								<div class="news-title color black">
 									BANYAK <strong>DIBICARAKAN</strong>
 								</div>
 								<div class="clear"></div>
 							</div>
 						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
 			</div>
