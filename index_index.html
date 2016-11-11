@@ -95,7 +95,7 @@
 		left: 0;
 		width: 100%;
 		height: 65px;
-		box-shadow: 0 0px 7px #646464;
+		box-shadow:0px 5px 10px 0px rgba(0,0,0,0.16);		
 		background: #ce0a46;
 		background: -webkit-linear-gradient(left, #ce0a46 , #e98125);
 		background: -o-linear-gradient(right, #ce0a46, #e98125);
@@ -206,8 +206,6 @@
 		line-height:440px;
 		overflow:hidden;
 	}
-	/*Featured News - IMPORTANT*/
-	/*Featured News - Styling*/
 	.featured-news .news-image img 
 	{
 		height: 100%;
@@ -216,6 +214,8 @@
 	    position: relative;
 	    z-index: -1;
 	}
+	/*Featured News - IMPORTANT*/
+	/*Featured News - Styling*/
 	.featured-news .news-detail
 	{
 	    position: absolute;
@@ -266,19 +266,23 @@
 	}
 	.category.tips
 	{
-		background-color: #ff9600
+		background-color: #ff9600;
 	}
 	.category.news
 	{
-		background-color: #0078ff
+		background-color: #0078ff;
 	}
 	.category.gokil
 	{
-		background-color: #7e00ff
+		background-color: #7e00ff;
 	}
 	.category.gadget
 	{
-		background-color: #ff00fc
+		background-color: #ff00fc;
+	}
+	.category.software
+	{
+		background-color: #ff3600;
 	}
 	.category.giveaway
 	{
@@ -342,6 +346,18 @@
 	{
 		color: #b2b2b2;
 	}
+	.color.deepgray
+	{
+		color: #525252;
+	}
+	.color.deepblue
+	{
+		color: #006da6;
+	}
+	.color.deepgreen
+	{
+		color: #368800;
+	}
 	/*Color - Styling*/
 	/*Overlay Menu - Styling*/
 	.featured-news .news-image:before, .featured-news .news-image:after
@@ -372,7 +388,7 @@
 	{
 		background-color: rgba(0,109,125,0.25);
 	}
-	.news-image.apps:after
+	.news-image.software:after
 	{
 		background-color: rgba(125,55,0,0.25);
 	}
@@ -426,8 +442,6 @@
 		left: 0;
 		margin: 0;
 	}
-	/*Banyak Dibicarakan - IMPORTANT*/
-	/*Banyak Dibicarakan - Styling*/
 	.banyak-dibicarakan .news-image img 
 	{
 		height: 100%;
@@ -437,6 +451,8 @@
 	    position: relative;
 	    z-index: -1;
 	}
+	/*Banyak Dibicarakan - IMPORTANT*/
+	/*Banyak Dibicarakan - Styling*/
 	.banyak-dibicarakan .news-detail
 	{
 		margin-top: 10px;
@@ -508,7 +524,182 @@
 		max-width: 100%;
 		overflow: hidden;
 	}
+	.wajib-coba .news-detail .rating
+	{
+		position: relative;
+		width: 90px;
+		height: 20px;
+		overflow: hidden;
+	}
+	.wajib-coba .news-detail .rating .empty-score, .wajib-coba .news-detail .rating .fill-score
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url(assets/images/star-empty.png);
+		background-size: 18px;
+		background-repeat: repeat-x;
+		width: 100%;
+		z-index: 1;
+	}
+	.wajib-coba .news-detail .rating .fill-score
+	{
+		width: 0;
+		background-image: url(assets/images/star-fill.png);
+		z-index: 5;
+	}
 	/*Wajib Coba - Styling*/
+	/*Paling Laris Paling Unik - IMPORTANT*/
+	.paling-laris
+	{
+		margin-right: 10px;
+	}
+	.paling-unik
+	{
+		margin-left: 10px;
+	}
+	.paling-laris .news-item, .paling-unik .news-item
+	{
+		position: relative;
+	}
+	.paling-laris .news-item:nth-child(1), .paling-unik .news-item:nth-child(1)
+	{
+		height: 200px;
+	}
+	.paling-laris .news-item:nth-child(1) .news-image, .paling-unik .news-item:nth-child(1) .news-image 
+	{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		text-align:center;
+		line-height:200px;
+		overflow:hidden;
+	}
+	.paling-laris .news-item:nth-child(1) .news-image img, .paling-unik .news-item:nth-child(1) .news-image img 
+	{
+		height: 100%;
+		margin: 0% -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: -1;
+	}
+	.paling-laris .news-image .author, .paling-unik .news-image .author
+	{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-family: "Roboto";
+		font-size: 10px;
+		line-height: 16px;
+		text-shadow: 1px 1px #666, 0px 0px 1px #fff;
+	}
+	.paling-laris .news-item:nth-child(1) .news-detail, .paling-unik .news-item:nth-child(1) .news-detail
+	{
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		padding: 20px;
+	}
+	.paling-laris .news-item:nth-child(2), .paling-unik .news-item:nth-child(2)
+	{
+		height: 100px;
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.paling-laris .news-item:nth-child(2) .news-detail, .paling-unik .news-item:nth-child(2) .news-detail
+	{
+		padding-top: 10px;
+		padding-left: 20px;
+		padding-bottom: 10px;
+		padding-right: 116px;
+	}
+	.paling-laris .news-item:nth-child(2) .news-image, .paling-unik .news-item:nth-child(2) .news-image 
+	{
+		position: absolute;
+		height: 100px;
+		width: 100px;
+		right: 0;
+		top: 0;
+		text-align:center;
+		overflow:hidden;
+	}
+	.paling-laris .news-item:nth-child(2) .news-image img, .paling-unik .news-item:nth-child(2) .news-image img 
+	{
+		height: 100%;
+		margin: 0% -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: -1;
+	}
+	.paling-laris .news-item:nth-child(3), .paling-unik .news-item:nth-child(3)
+	{
+		border-top: 1px solid #ddd;
+	}
+	.paling-laris .news-item:nth-child(n+3), .paling-unik .news-item:nth-child(n+3)
+	{
+		height: 60px;
+		border-bottom: 1px solid #ddd;
+	}
+	.paling-laris .news-item:nth-last-child(2), .paling-unik .news-item:nth-last-child(2)
+	{
+		border-bottom: 0;
+	}
+	/*Paling Laris Paling Unik - IMPORTANT*/
+	/*Paling Laris Paling Unik - Styling*/
+	.paling-laris .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title
+	{
+		font-family: "Shentox";
+		font-size: 24px;
+		font-weight: 600;
+		text-shadow: 2px 2px #666, 0px 0px 1px #fff;
+	}
+	.paling-laris .news-item:nth-child(1) .news-image:before, .paling-unik .news-item:nth-child(1) .news-image:before
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: "";
+	}
+	.paling-laris .news-item:nth-child(2) .news-detail, .paling-unik .news-item:nth-child(2) .news-detail
+	{
+		font-family: "Roboto";
+		font-size: 17px;
+		line-height: 24px;
+	}
+	.paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title
+	{
+		margin-top: 4px;
+		font-weight: 700;
+		max-height: 50px;
+		overflow: hidden;
+	}
+	.paling-laris .news-item:nth-child(n+3) .news-detail, .paling-unik .news-item:nth-child(n+3) .news-detail
+	{
+		padding-top: 12px;
+		padding-right: 12px;
+		padding-bottom: 12px;
+		padding-left: 25px;
+		font-family: "Roboto";
+		line-height: 18px;
+		font-size: 15px;
+		font-weight: 500;
+	}
+	.paling-laris .news-item:nth-child(n+3) .news-detail:before, .paling-unik .news-item:nth-child(n+3) .news-detail:before
+	{
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		content: "";
+		top: 27px;
+		left: 10px;
+		background-color: #afafaf;
+	}
+	/*Paling Laris Paling Unik - Styling*/
 	/*Ads - Styling*/
 	.ad-container
 	{
@@ -637,7 +828,7 @@
 					</div>
 					<div class="featured-news-sm box-6">
 						<a href="#" class="link-overlay">
-							<div class="news-image apps">
+							<div class="news-image software">
 								<img src="assets/Banner/samsung-vs-apple.jpeg">
 							</div>
 							<div class="news-detail">
@@ -661,6 +852,7 @@
 			</div>
 			<div class="all-news">
 				<div class="main-content">
+					<!-- Wajib Coba -->
 					<div class="wajib-coba news-content">
 						<div class="news-title color black">
 							WAJIB <strong>COBA</strong>
@@ -675,21 +867,11 @@
 										<div class="title color black">
 											UC Browser
 										</div>
-										<div class="type color gray">
-											Browser
-										</div>
-									</div>
-								</a>
-								<div class="clear"></div>
-							</div>
-							<div class="news-item">
-								<a href="#" class="link-overlay">
-									<div class="news-image">
-										<img src="assets/images/uc-icon.png">
-									</div>
-									<div class="news-detail">
-										<div class="title color black">
-											UC Browser
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
 										</div>
 										<div class="type color gray">
 											Browser
@@ -707,21 +889,11 @@
 										<div class="title color black">
 											UC Browser
 										</div>
-										<div class="type color gray">
-											Browser
-										</div>
-									</div>
-								</a>
-								<div class="clear"></div>
-							</div>
-							<div class="news-item">
-								<a href="#" class="link-overlay">
-									<div class="news-image">
-										<img src="assets/images/uc-icon.png">
-									</div>
-									<div class="news-detail">
-										<div class="title color black">
-											UC Browser
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
 										</div>
 										<div class="type color gray">
 											Browser
@@ -739,21 +911,11 @@
 										<div class="title color black">
 											UC Browser
 										</div>
-										<div class="type color gray">
-											Browser
-										</div>
-									</div>
-								</a>
-								<div class="clear"></div>
-							</div>
-							<div class="news-item">
-								<a href="#" class="link-overlay">
-									<div class="news-image">
-										<img src="assets/images/uc-icon.png">
-									</div>
-									<div class="news-detail">
-										<div class="title color black">
-											UC Browser
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
 										</div>
 										<div class="type color gray">
 											Browser
@@ -771,21 +933,11 @@
 										<div class="title color black">
 											UC Browser
 										</div>
-										<div class="type color gray">
-											Browser
-										</div>
-									</div>
-								</a>
-								<div class="clear"></div>
-							</div>
-							<div class="news-item">
-								<a href="#" class="link-overlay">
-									<div class="news-image">
-										<img src="assets/images/uc-icon.png">
-									</div>
-									<div class="news-detail">
-										<div class="title color black">
-											UC Browser
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
 										</div>
 										<div class="type color gray">
 											Browser
@@ -803,6 +955,12 @@
 										<div class="title color black">
 											UC Browser
 										</div>
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
+										</div>
 										<div class="type color gray">
 											Browser
 										</div>
@@ -818,6 +976,100 @@
 									<div class="news-detail">
 										<div class="title color black">
 											UC Browser
+										</div>
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
+										</div>
+										<div class="type color gray">
+											Browser
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image">
+										<img src="assets/images/uc-icon.png">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											UC Browser
+										</div>
+										<div class="rating">
+											<div class="fill-score" style="width: 60%;">
+											</div>
+											<div class="empty-score">
+											</div>
 										</div>
 										<div class="type color gray">
 											Browser
@@ -830,6 +1082,8 @@
 						</div>
 						<div class="clear"></div>
 					</div>
+					<!-- Wajib Coba -->
+					<!-- Banyak Dibicarakan -->
 					<div class="banyak-dibicarakan news-content">
 						<div class="news-title color black">
 							BANYAK <strong>DIBICARAKAN</strong>
@@ -966,11 +1220,91 @@
 							<div class="clear"></div>
 						</div>
 					</div>
+					<!-- Banyak Dibicarakan -->
+					<!-- Paling Laris Paling Unik -->
 					<div class="paling-news">
 						<div class="box-6 paling-news-item">
 							<div class="paling-laris news-content">
 								<div class="news-title color black">
-									BANYAK <strong>DIBICARAKAN</strong>
+									PALING <strong>LARIS</strong>
+								</div>
+								<div class="news-container">
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-image software">
+												<img src="assets/Banner/samsung-vs-apple.jpeg">
+												<div class="author color gray">
+													OLEH <span class="color white">AMRILLAH WARDI</span>
+												</div>
+											</div>
+											<div class="news-detail">
+												<div class="category software color white">
+													SOFTWARE
+												</div>
+												<div class="title color white">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-image software">
+												<img src="assets/Banner/samsung-vs-apple.jpeg">
+											</div>
+											<div class="news-detail">
+												<div class="color deepgray">
+													Unggulan
+												</div>
+												<div class="title color deepblue">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="clear"></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -978,13 +1312,92 @@
 						<div class="box-6 paling-news-item">
 							<div class="paling-unik news-content">
 								<div class="news-title color black">
-									BANYAK <strong>DIBICARAKAN</strong>
+									PALING <strong>UNIK</strong>
+								</div>
+								<div class="news-container">
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-image software">
+												<img src="assets/Banner/samsung-vs-apple.jpeg">
+												<div class="author color gray">
+													OLEH <span class="color white">AMRILLAH WARDI</span>
+												</div>
+											</div>
+											<div class="news-detail">
+												<div class="category software color white">
+													SOFTWARE
+												</div>
+												<div class="title color white">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-image software">
+												<img src="assets/Banner/samsung-vs-apple.jpeg">
+											</div>
+											<div class="news-detail">
+												<div class="color deepgray">
+													Unggulan
+												</div>
+												<div class="title color deepgreen">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="news-item">
+										<a href="#" class="link-overlay">
+											<div class="news-detail">
+												<div class="title color deepgray">
+													Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+												</div>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+									<div class="clear"></div>
 								</div>
 								<div class="clear"></div>
 							</div>
 						</div>
 						<div class="clear"></div>
 					</div>
+					<!-- Paling Laris Paling Unik -->
 				</div>
 			</div>
 		</div>
