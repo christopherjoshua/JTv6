@@ -37,22 +37,27 @@
 	.box-1
 	{
 		width: 8.33%%;
+		width: calc(100% / 12);
 	}
 	.box-2
 	{
 		width: 16.66%;
+		width: calc(100% / 6);
 	}
 	.box-3
 	{
 		width: 25%;
+		width: calc(100% / 4);
 	}
 	.box-4
 	{
 		width: 33.33%;
+		width: calc(100% / 3);
 	}
 	.box-5
 	{
 		width: 41.66%;
+		width: calc(100% *  (5 / 12));
 	}
 	.box-6
 	{
@@ -61,22 +66,27 @@
 	.box-7
 	{
 		width: 58.33%;
+		width: calc(100% *  (7 / 12));
 	}
 	.box-8
 	{
 		width: 66.66%;
+		width: calc(100% *  (2 / 3));
 	}
 	.box-9
 	{
 		width: 75%;
+		width: calc(100% *  (3 / 4));
 	}
 	.box-10
 	{
 		width: 83.33%;
+		width: calc(100% *  (5 / 6));
 	}
 	.box-11
 	{
 		width: 91.66%;
+		width: calc(100% *  (11 / 12));
 	}
 	.box-12
 	{
@@ -346,28 +356,36 @@
 	{
 		color: #368800;
 	}
+	.color.brightred
+	{
+		color: #ce0a46;
+	}
 	/*Color - Styling*/
 	/*All News - IMPORTANT*/
 	.all-news
 	{
+		position: relative;
 		max-width: 1326px;
 		margin-right: auto;
 		margin-left: auto;
 		background-color: #fff;
 		min-height: 200px;
 		padding-right: 340px;
-		border-right: 1px solid #ddd;
 		box-sizing: border-box;
 	}
 	.main-content
 	{
-		padding:20px;
+		padding-top:20px;
+		padding-left:20px;
+		padding-bottom:20px;
+		padding-right:19px;
+		border-right: 1px solid #ddd;
 	}
 	.news-content
 	{
 		position: relative;
 	}
-	.news-title
+	.main-content .news-title
 	{
 		position: relative;
 		display: inline-block;
@@ -376,11 +394,11 @@
 		padding-right: 20px;
 		background-color: #fff;
 	}
-	.news-content:before
+	.main-content .news-content:before
 	{
 		position: absolute;
 		content: "";
-		top: 13px;
+		top: 10px;
 		left: 0;
 		height: 5px;
 		width: 100%;
@@ -446,6 +464,41 @@
 		bottom: 0;
 		-webkit-transition:0.2s;
 		transition:0.2s;
+	}
+	.news-detail .title
+	{
+		position: relative;
+		-webkit-line-clamp : 3;
+		display            : block;
+		display            : -webkit-box;
+		-webkit-box-orient : vertical;
+		position           : relative;
+		overflow           : hidden;
+		text-overflow      : ellipsis;
+		padding            : 0 !important;
+	}
+	.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title
+	{
+		-webkit-line-clamp : 2;
+	}
+	.news-detail .title:after
+	{
+		content    : '...';
+		text-align : right;
+		bottom     : 0;
+		right      : 0;
+		width      : 25%;
+		display    : block;
+		position   : absolute;
+		height     : 18px;
+		background : linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+	}
+	@supports (-webkit-line-clamp: 1)
+	{
+		.news-detail .title:after
+		{
+			display : none !important;
+		}
 	}
 	/*Overlay Menu - Styling*/
 	.news-container
@@ -906,7 +959,7 @@
 	}
 	/* Masih Hangat - Styling */
 	/*Ads - Styling*/
-	.ad-container
+	.ad-728-container
 	{
 		display: block;
 		width: 728px;
@@ -915,6 +968,23 @@
 		margin-bottom: 15px;
 		margin-left: auto;
 		margin-right: auto;
+		border: 1px solid #ddd;
+	}
+	.ad-300-container
+	{
+		display: block;
+		width: 300px;
+		height: 250px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid #ddd;
+	}
+	.sidebar-content .ad-300-container
+	{
+		margin-top: 0;
+		margin-bottom: 20px;
 	}
 	/*Ads - Styling*/
 	/*Loading - Styling*/
@@ -1098,7 +1168,7 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-			<div class="ad-container">
+			<div class="ad-728-container">
 				<img src="assets/images/example-ad.png">
 			</div>
 			<div class="all-news">
@@ -1649,7 +1719,7 @@
 						<div class="clear"></div>
 					</div>
 					<!-- Paling Laris Paling Unik -->
-					<div class="ad-container">
+					<div class="ad-728-container">
 						<img src="assets/images/example-ad.png">
 					</div>
 					<!-- Paling Disukai -->
@@ -1952,6 +2022,138 @@
 									
 								</div>
 							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<style>
+				/*Sidebar - IMPORTANT*/
+				.sidebar-content
+				{
+				    position: absolute;
+				    width: 340px;
+				    right: 0;
+				    top: 0;
+				    padding: 20px;
+				    box-sizing: border-box;
+				}
+				/*Sidebar - IMPORTANT*/
+				/*Populer Hari ini - IMPORTANT*/
+				
+				.sidebar-content .news-content:before
+				{
+					position: absolute;
+					content: "";
+					top: 0;
+					left: 0;
+					height: 32px;
+					width: 5px;
+					background-color: #ce0a46;
+					z-index: 1;
+				}
+				.sidebar-content .news-title
+				{
+					position: relative;
+					display: inline-block;
+					font-family: "Shentox";
+					font-size: 22px;
+					padding-left: 20px;
+					background-color: #fff;
+				}
+				.populer-hari-ini .news-item
+				{
+					position: relative;
+					height: 60px;
+					margin-bottom: 20px;
+				}
+				.populer-hari-ini .news-item .news-image
+				{
+					width: 60px;
+					height: 60px;
+				}
+				/*Populer Hari ini - IMPORTANT*/
+				/*Populer Hari ini - Styling*/
+				.populer-hari-ini .news-title
+				{
+					height: 32px;
+					line-height: 34px;
+					font-weight: 500;
+				}
+				.populer-hari-ini .news-detail .news-date
+				{
+					position: absolute;
+					left: 80px;
+					bottom: 0px;
+				}
+				.populer-hari-ini .news-detail .date
+				{
+					font-family: "Open Sans";
+					font-size: 12px;
+					line-height: 18px;
+				}
+				.populer-hari-ini .news-detail
+				{
+					padding-left: 80px;
+					padding-right: 5px;
+					height: 60px;
+				}
+				.populer-hari-ini .news-detail .title
+				{
+					font-family: "Open Sans";
+					font-size: 13px;
+					font-weight: 600;
+					line-height: 20px;
+				}
+				.populer-hari-ini .news-item .news-image 
+				{
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 60px;
+					width: 60px;
+					text-align:center;
+					line-height:200px;
+					overflow:hidden;
+				}
+				.populer-hari-ini .news-item .news-image img 
+				{
+					height: 100%;
+					width: 100%;
+					margin: 0 -100%;
+				    vertical-align: top;
+				    position: relative;
+				    z-index: -1;
+				}
+				/*Populer Hari ini - Styling*/
+				</style>
+				<div class="sidebar-content">
+					<div class="ad-300-container">
+						<img src="assets/images/example-ad-square.png">
+					</div>
+					<div class="populer-hari-ini news-content">
+						<div class="news-title color black">
+							<span class="color brightred">POPULER</span> HARI INI
+						</div>
+						<div class="news-container">
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
 						</div>
 						<div class="clear"></div>
 					</div>
