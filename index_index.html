@@ -264,6 +264,20 @@
 		text-align: center;
 		margin-bottom: 10px;
 	}
+	.category-sm
+	{
+		font-family: "Roboto";
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.category-sm.tips
+	{
+		color: #2196f3;
+	}
+	.category-sm.news
+	{
+		color: #f37a21;
+	}
 	.category.tips
 	{
 		background-color: #ff9600;
@@ -293,6 +307,32 @@
 		background-color: #a800ff;
 	}
 	/*Category - Styling*/
+	/*Color - Styling*/
+	.color.white
+	{
+		color: #fff;
+	}
+	.color.black
+	{
+		color: #000;
+	}
+	.color.gray
+	{
+		color: #b2b2b2;
+	}
+	.color.deepgray
+	{
+		color: #525252;
+	}
+	.color.deepblue
+	{
+		color: #006da6;
+	}
+	.color.deepgreen
+	{
+		color: #368800;
+	}
+	/*Color - Styling*/
 	/*All News - IMPORTANT*/
 	.all-news
 	{
@@ -332,33 +372,11 @@
 		width: 100%;
 		background-color: #d1d1d1;
 	}
+	.news-content:last-child .news-container
+	{
+		margin-bottom: 0;
+	}
 	/*All News - IMPORTANT*/
-	/*Color - Styling*/
-	.color.white
-	{
-		color: #fff;
-	}
-	.color.black
-	{
-		color: #000;
-	}
-	.color.gray
-	{
-		color: #b2b2b2;
-	}
-	.color.deepgray
-	{
-		color: #525252;
-	}
-	.color.deepblue
-	{
-		color: #006da6;
-	}
-	.color.deepgreen
-	{
-		color: #368800;
-	}
-	/*Color - Styling*/
 	/*Overlay Menu - Styling*/
 	.featured-news .news-image:before, .featured-news .news-image:after
 	{
@@ -372,36 +390,48 @@
 		-webkit-transition:0.2s;
 		transition:0.2s;
 	}
-	.news-image.tips:after
+	.featured-news .news-image.tips:after
 	{
 		background-color: rgba(206,10,10,0.25);
 	}
-	.news-image.news:after
+	.featured-news .news-image.news:after
 	{
 		background-color: rgba(0,125,21,0.25);
 	}
-	.news-image.gokil:after
+	.featured-news .news-image.gokil:after
 	{
 		background-color: rgba(71,0,125,0.25);
 	}
-	.news-image.gadget:after
+	.featured-news .news-image.gadget:after
 	{
 		background-color: rgba(0,109,125,0.25);
 	}
-	.news-image.software:after
+	.featured-news .news-image.software:after
 	{
 		background-color: rgba(125,55,0,0.25);
 	}
 	.news-image:before
 	{
-		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) , transparent);
-		background: -o-linear-gradient(top, rgba(0,0,0,0.5) , transparent);
-		background: -moz-linear-gradient(top, rgba(0,0,0,0.5) , transparent);
-		background: linear-gradient(to top, rgba(0,0,0,0.5) , transparent);
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -o-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
 	}
-	.news-image:hover:after
+	.featured-news .news-image:hover:after
 	{
 		opacity: 0;
+	}
+	.featured-news .news-image:before, .featured-news .news-image:after
+	{
+		content:"";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		-webkit-transition:0.2s;
+		transition:0.2s;
 	}
 	/*Overlay Menu - Styling*/
 	.news-container
@@ -767,11 +797,90 @@
 		-webkit-transition:0.2s;
 		transition:0.2s;
 	}
-	.paling-disukai .news-container
+	/*Paling Disukai - Styling*/
+	/* Masih Hangat - IMPORTANT */
+	.masih-hangat .news-item
+	{
+		height: 110px;
+		margin-bottom: 20px;
+	}
+	.masih-hangat .news-item:nth-last-child(2), .masih-hangat .news-item:nth-last-child(3)
 	{
 		margin-bottom: 0;
 	}
-	/*Paling Disukai - Styling*/
+	.masih-hangat .news-image {
+		position: absolute;
+		width: 190px;
+		height: 100%;
+		text-align:center;
+		line-height:440px;
+		overflow:hidden;
+	}
+	.masih-hangat .news-image img 
+	{
+		height: 100%;
+		margin: 0 -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: -1;
+	}
+	
+	/* Masih Hangat - IMPORTANT */
+	/* Masih Hangat - Styling */
+	.masih-hangat .news-item .news-detail
+	{
+		position: relative;
+		height: 100px;
+		padding-left: 205px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 10px;
+	}
+	.masih-hangat .news-item .news-detail .title
+	{
+		font-family: "Shentox";
+		font-size: 17px;
+		line-height: 24px;
+		font-weight: 600;
+	}
+	.masih-hangat .news-date
+	{
+		position: absolute;
+		bottom: 5px;
+		left: 205px;
+		height: 18px;
+	}
+	.masih-hangat .news-date .category-sm
+	{
+		position: relative;
+		display: inline-block;
+		margin-right: 5px;
+		line-height: 18px;
+	}
+	.masih-hangat .news-date .date
+	{
+		position: relative;
+		display: inline-block;
+		padding-left: 24px;
+		font-family: "Roboto";
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.masih-hangat .news-date .date:before
+	{
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		left: 0;
+		top: 1px;
+		bottom: 0;
+		background-image: url(assets/images/time-icon.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 15px;
+	}
+	/* Masih Hangat - Styling */
 	/*Ads - Styling*/
 	.ad-container
 	{
@@ -1592,7 +1701,185 @@
 							<div class="clear"></div>
 						</div>
 					</div>
-					<!-- Banyak Dibicarakan -->
+					<!-- Paling Disukai -->
+					<!-- Masih Hangat -->
+					<div class="masih-hangat news-content">
+						<div class="news-title color black">
+							MASIH <strong>HANGAT</strong>
+						</div>
+						<div class="news-container">
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item box-6">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="category-sm tips">
+												TIPS
+											</div>
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
 				</div>
 			</div>
 		</div>
