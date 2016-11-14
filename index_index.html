@@ -213,6 +213,10 @@
 	    vertical-align: top;
 	    position: relative;
 	    z-index: -1;
+	    -webkit-transform-origin: center;
+	    transform-origin: center;
+	    -webkit-transition: 0.4s;
+	    transition: 0.4s;
 	}
 	/*Featured News - IMPORTANT*/
 	/*Featured News - Styling*/
@@ -251,6 +255,10 @@
 	.featured-news .featured-news-sm .news-detail .author
 	{
 		font-size: 11px;
+	}
+	.featured-news .news-image:hover img
+	{
+		transform: scale(1.1);
 	}
 	/*Featured News - Styling*/
 	/*Category - Styling*/
@@ -804,7 +812,7 @@
 		height: 110px;
 		margin-bottom: 20px;
 	}
-	.masih-hangat .news-item:nth-last-child(2), .masih-hangat .news-item:nth-last-child(3)
+	.masih-hangat .news-item:nth-last-child(3), .masih-hangat .news-item:nth-last-child(4)
 	{
 		margin-bottom: 0;
 	}
@@ -893,6 +901,52 @@
 		margin-right: auto;
 	}
 	/*Ads - Styling*/
+	/*Loading - Styling*/
+	.news-loading
+	{
+		position: relative;
+		height: 90px;
+		width: 90px;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.news-loading .loader
+	{
+		height: 100%;
+		width: 100%;
+		background-image: url(assets/images/loading.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.news-loading .loader:before
+	{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		content: "";
+		border-top: 5px solid #ededed;
+		border-right: 5px solid #ededed;
+		border-bottom: 5px solid #ededed;
+		border-left: 5px solid #ee4c4c;
+		border-radius: 50%;
+		box-sizing: border-box;
+		-webkit-animation: load 1s linear infinite;
+		animation: load 1s linear infinite;
+	}
+	@-webkit-keyframes load
+	{
+		0% { transform: rotate(0deg);}
+		100% { transform: rotate(360deg);}
+	}
+	@keyframes load
+	{
+		0% { transform: rotate(0deg);}
+		100% { transform: rotate(360deg);}
+	}
+	/*Loading - Styling*/
 	</style>
 	<div class="root" id="root">
 		<div class="jalantikus-menu-bar">
@@ -1877,6 +1931,11 @@
 								<div class="clear"></div>
 							</div>
 							<div class="clear"></div>
+							<div class="news-loading">
+								<div class="loader">
+									
+								</div>
+							</div>
 						</div>
 						<div class="clear"></div>
 					</div>
