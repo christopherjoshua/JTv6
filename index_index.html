@@ -478,7 +478,7 @@
 		text-overflow      : ellipsis;
 		padding            : 0 !important;
 	}
-	.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title
+	.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title, .top-download-list .news-detail .title
 	{
 		-webkit-line-clamp : 2;
 	}
@@ -999,7 +999,7 @@
 	}
 	/*Ads - Styling*/
 	/*Loading - Styling*/
-	.news-loading
+	.masih-hangat .news-loading
 	{
 		position: relative;
 		height: 90px;
@@ -1008,7 +1008,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.news-loading .loader
+	.masih-hangat .news-loading .loader
 	{
 		height: 100%;
 		width: 100%;
@@ -1016,7 +1016,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 	}
-	.news-loading .loader:before
+	.masih-hangat .news-loading .loader:before
 	{
 		position: absolute;
 		height: 100%;
@@ -1042,6 +1042,53 @@
 	{
 		0% { transform: rotate(0deg);}
 		100% { transform: rotate(360deg);}
+	}	
+	.top-download-list .news-loading
+	{
+		position: relative;
+		height: 35px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #ce0a46;
+		border-radius: 4px;
+	}
+	.top-download-list .news-loading .loader
+	{
+		float: right;
+		height: 100%;
+		width: 100%;
+		padding-left: 55px;
+		font-family: "Open Sans";
+		font-size: 13px;
+		line-height: 35px;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	.top-download-list .news-loading .loader:before
+	{
+		position: absolute;
+		height: 8px;
+		width: 8px;
+		top: 14px;
+		left: 30px;
+		background-color: transparent;
+		content: "";
+		border-radius: 50%;
+		box-shadow: 50px 0px #fff, 64px 0px #fff, 78px 0px #fff;
+		box-sizing: border-box;
+		-webkit-animation: load-dot 1s linear infinite;
+		animation: load-dot 1s linear infinite;
+	}
+	@-webkit-keyframes load-dot
+	{
+		0% { box-shadow: 50px 0px #fff, 64px 0px #fff, 78px 0px #fff, 92px 0px transparent;}
+		60%, 100% { box-shadow: 36px 0px transparent, 50px 0px #fff, 64px 0px #fff, 78px 0px #fff;}
+	}
+	@keyframes load-dot
+	{
+		0% { box-shadow: 50px 0px #fff, 64px 0px #fff, 78px 0px #fff, 92px 0px transparent;}
+		60%, 100% { box-shadow: 36px 0px transparent, 50px 0px #fff, 64px 0px #fff, 78px 0px #fff;}
 	}
 	/*Loading - Styling*/
 	/*Sidebar - IMPORTANT*/
@@ -1118,7 +1165,7 @@
 	{
 		font-family: "Open Sans";
 		font-size: 13px;
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 20px;
 		-webkit-transition: 0.2s;
 		transition: 0.2s;
@@ -1207,6 +1254,426 @@
 		background-color: #e98025;
 	}
 	/*Populer Hari ini - Styling*/
+	/*Top Download - IMPORTANT*/
+	.top-download.news-content
+	{
+		width: 300px;
+		height: 110px;
+		padding: 20px;
+		background: #ce0a46;
+		background: -webkit-linear-gradient(15deg, #ce0a46 , #e98125);
+		background: -o-linear-gradient(15deg, #ce0a46, #e98125);
+		background: -moz-linear-gradient(15deg, #ce0a46, #e98125);
+		background: linear-gradient(15deg, #ce0a46 , #e98125);
+		border-radius: 5px;
+		box-sizing: border-box;
+	}
+	/*Top Download - IMPORTANT*/
+	/*Top Download - Styling*/
+	.top-download .news-title
+	{
+		font-family: "Open Sans";
+		font-size: 22px;
+		line-height: 15px;
+		font-weight: 500;
+	}
+	.type-selection
+	{
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+	}
+	.system-selection
+	{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+	.selection-button
+	{
+		opacity: 0.5;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+		text-decoration: none;
+	}
+	.selection-button.active
+	{
+		opacity: 1;
+	}
+	.type-selection .selection-button
+	{
+		display: inline-block;
+		height: 30px;
+		width: 100px;
+		margin-right: 12px;
+		font-family: "Shentox";
+		font-size: 15px;
+		text-align: center;
+		line-height: 32px;
+		border: 1px solid #fff;
+		border-radius: 4px;
+	}
+	.system-selection .selection-button
+	{
+		display: inline-block;
+		height: 25px;
+		width: 25px;
+		margin-left: 4px;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	.system-selection .selection-button.os-android
+	{
+		background-image: url(assets/images/google-playstore-icon.png);
+		background-repeat: no-repeat;
+		background-size: 20px;
+		background-position: center;
+	}
+	.system-selection .selection-button.os-windows
+	{
+		background-image: url(assets/images/windows-icon.png);
+		background-repeat: no-repeat;
+		background-size: 20px;
+		background-position: center;
+	}
+	/*Top Download - Styling*/
+	/*Featured Download - Styling*/
+	.featured-download.news-content .news-item
+	{
+		position: absolute;
+		width: 100%;
+	}
+	.featured-download .news-item
+	{
+		opacity: 0;
+		left: 200px;
+		-webkit-transition: 0.3s;
+		transition: 0.3s;
+	}
+	.featured-download .news-item.active
+	{
+		opacity: 1;
+		left: 0;
+		z-index: 1;
+	}
+	.featured-download .news-item .download, .featured-download .news-item .detail
+	{
+		position: relative;
+		display: inline-block;
+		height: 20px;
+		width: 80px;
+		margin-right: 10px;
+		font-family: "Open Sans";
+		font-size: 10px;
+		line-height: 20px;
+		text-align: center;
+		box-sizing: border-box;
+		z-index: 1;
+	}
+	.featured-download .news-item .download-now
+	{
+		position: absolute;
+		top: 32px;
+		-webkit-transition: 0.3s;
+		transition: 0.3s;
+		z-index: 1;
+	}
+	.featured-download .news-item .download
+	{
+		background: #ce0a46;
+		background: -webkit-linear-gradient(15deg, #ce0a46 , #e98125);
+		background: -o-linear-gradient(15deg, #ce0a46, #e98125);
+		background: -moz-linear-gradient(15deg, #ce0a46, #e98125);
+		background: linear-gradient(15deg, #ce0a46 , #e98125);
+		border-radius: 2px;
+		box-sizing: border-box;
+	}
+	.featured-download .news-item .detail
+	{
+		border: 1px solid #dedede;
+	}
+	.featured-download .news-item.active:hover .rating, .featured-download .news-item.active:hover .filesize, .featured-download .news-item .download-now
+	{
+		opacity: 0;
+	}
+	.featured-download .news-item.active:hover .download-now
+	{
+		opacity: 1;
+	}
+	.featured-download.news-content
+	{
+		position: relative;
+		height: 64px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+	.featured-download .news-image
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 64px;
+		height: 64px;
+		text-align:center;
+		overflow:hidden;
+	}
+	.featured-download .news-image img
+	{
+		height: 100%;
+		margin: 0 -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: 0;
+	    -webkit-transform-origin: center;
+	    transform-origin: center;
+	    -webkit-transition: 0.4s;
+	    transition: 0.4s;
+	}
+	.featured-download.news-content .news-item .news-detail
+	{
+		height: 64px;
+		padding-left: 80px;
+		padding-right: 10px;
+		box-sizing: border-box;
+	}
+	.featured-download.news-content .news-item .news-detail .title
+	{
+		height: 32px;
+		font-family: "Open Sans";
+		font-size: 14px;
+		line-height: 32px;
+		font-weight: 700;
+	}
+	.featured-download .news-detail .rating
+	{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 90px;
+		height: 18px;
+		margin-right: 10px;
+		overflow: hidden;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+	}
+	.featured-download .news-detail .filesize
+	{
+		display: inline-block;
+		vertical-align: top;
+		height: 18px;
+		font-family: "Open Sans";
+		font-size: 13px;
+		line-height: 18px;
+		padding-left: 10px;
+		border-left: 1px solid #ddd;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+	}
+	.featured-download .news-detail .rating .empty-score, .featured-download .news-detail .rating .fill-score
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url(assets/images/star-empty.png);
+		background-size: 18px;
+		background-repeat: repeat-x;
+		background-position: left center;
+		width: 100%;
+		z-index: 1;
+	}
+	.featured-download .news-detail .rating .fill-score
+	{
+		width: 0;
+		background-image: url(assets/images/star-fill.png);
+		z-index: 5;
+	}
+	/*Featured Download - Styling*/
+	/*Top Download List - IMPORTANT*/
+	.top-download-list .news-item
+	{
+		position: relative;
+		height: 50px;
+		border-bottom: 1px solid #ddd;
+	}
+	.top-download-list .news-item:first-child
+	{
+		border-top: 1px solid #ddd;
+	}
+	.top-download-list .news-item:nth-last-child(3)
+	{
+		border-bottom: 0;
+		margin-bottom: 10px;
+	}
+	/*Top Download List - IMPORTANT*/
+	/*Top Download List - Styling*/
+	.top-download-list .news-image
+	{
+		position: absolute;
+		left: 7px;
+		top: 7px;
+		width: 36px;
+		height: 36px;
+		text-align:center;
+		overflow:hidden;
+	}
+	.top-download-list .news-image img
+	{
+		height: 100%;
+		margin: 0 -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: 0;
+	    -webkit-transform-origin: center;
+	    transform-origin: center;
+	    -webkit-transition: 0.4s;
+	    transition: 0.4s;
+	}
+	.top-download-list .news-item .news-detail .ranking	
+	{
+		position: absolute;
+	    height: 50px;
+	    width: 30px;
+	    left: 50px;
+	    text-align: center;
+	    overflow: hidden;
+	    font-family: "Open Sans";
+	    font-size: 14px;
+	    line-height: 50px;
+	}
+	.top-download-list .news-item .news-detail .title
+	{
+	    position: absolute;
+		max-height: 40px;
+		max-width: 180px;
+	    top: 50%;
+	    left: 80px;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 20px;
+		vertical-align: middle;
+	    -webkit-transform: translate(0, -50%);
+	    transform: translate(0, -50%);
+	    -webkit-transition: 0.2s;
+	    transition: 0.2s;
+	}
+	.top-download-list .news-item .news-detail .title:hover
+	{
+		color: #ce0a46;
+	}
+	.top-download-list .news-item .news-detail .download-now
+	{
+		position: absolute;
+		top: 5px;
+		right: 0px;
+		width: 40px;
+		height: 40px;
+		-webkit-mask-image: url(assets/images/cloud-icon.png);
+		mask-image: url(assets/images/cloud-icon.png);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 24px;
+		mask-size: 24px;
+		-webkit-mask-position: center;
+		mask-position: center;
+		background-color: #ddd;
+		opacity: 0;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+		z-index: 1;
+	}
+	.top-download-list .news-item .news-detail:hover .download-now
+	{
+		opacity: 1;
+	}
+	.top-download-list .news-item .news-detail .download-now:hover
+	{
+		background-color: #ce0a46;
+	}
+	/*Top Download List - Styling*/
+	/*Langganan - IMPORTANT*/
+	.langganan.news-content
+	{
+		width: 300px;
+		padding: 20px;
+		margin-top: 20px;
+		background: #ce0a46;
+		background: -webkit-linear-gradient(15deg, #ce0a46 , #e98125);
+		background: -o-linear-gradient(15deg, #ce0a46, #e98125);
+		background: -moz-linear-gradient(15deg, #ce0a46, #e98125);
+		background: linear-gradient(15deg, #ce0a46 , #e98125);
+		border-radius: 5px;
+		box-sizing: border-box;
+	}
+	/*Langganan - IMPORTANT*/
+	/*Langganan - Styling*/
+	.langganan .news-title
+	{
+		font-family: "Open Sans";
+		font-size: 22px;
+		line-height: 15px;
+		font-weight: 500;
+	}
+	.langganan .news-detail
+	{
+		margin-top: 20px;
+		font-family: "Open Sans";
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.langganan .email-langganan
+	{
+		position: relative;
+	}
+	.langganan .email-langganan input
+	{
+		width: 100%;
+		height: 40px;
+		font-family: "Open Sans";
+		font-size: 14px;
+		margin-top: 20px;
+		border: 0;
+		border-radius: 4px;
+		padding-left: 40px;
+		box-sizing: border-box;
+		outline: 0;
+	}
+	.langganan .email-langganan:before
+	{
+		position: absolute;
+		height: 16px;
+		width: 16px;
+		bottom: 12px;
+		left: 12px;
+		content: "";
+		-webkit-mask-image: url(assets/images/mail-icon.png);
+		mask-image: url(assets/images/mail-icon.png);
+		-webkit-mask-size: 16px 16px;
+		mask-size: 16px 16px;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-position: center center;
+		mask-position: center center;
+		background-color: #ce0a46;
+	}
+	.langganan .submit
+	{
+		height: 35px;
+		width: 100%;
+		margin-top: 20px;
+		font-family: "Shentox";
+		font-size: 14px;
+		text-align: center;
+		border: 0;
+		border-radius: 4px;
+		background-color: #3a2e28;
+		outline: 0;
+		cursor: pointer;
+	}
+	/*Langganan - Styling*/
 	</style>
 	<div class="root" id="root">
 		<div class="jalantikus-menu-bar">
@@ -2423,194 +2890,6 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<style>
-					/*Top Download - IMPORTANT*/
-					.top-download.news-content
-					{
-						width: 300px;
-						height: 110px;
-						padding: 20px;
-						background: #ce0a46;
-						background: -webkit-linear-gradient(15deg, #ce0a46 , #e98125);
-						background: -o-linear-gradient(15deg, #ce0a46, #e98125);
-						background: -moz-linear-gradient(15deg, #ce0a46, #e98125);
-						background: linear-gradient(15deg, #ce0a46 , #e98125);
-						border-radius: 5px;
-						box-sizing: border-box;
-					}
-					/*Top Download - IMPORTANT*/
-					/*Top Download - Styling*/
-					.top-download .news-title
-					{
-						font-family: "Open Sans";
-						font-size: 22px;
-						line-height: 15px;
-						font-weight: 500;
-					}
-					.type-selection
-					{
-						position: absolute;
-						bottom: 20px;
-						left: 20px;
-					}
-					.system-selection
-					{
-						position: absolute;
-						right: 20px;
-						top: 20px;
-					}
-					.selection-button
-					{
-						opacity: 0.5;
-						-webkit-transition: 0.2s;
-						transition: 0.2s;
-						text-decoration: none;
-					}
-					.selection-button.active
-					{
-						opacity: 1;
-					}
-					.type-selection .selection-button
-					{
-						display: inline-block;
-						height: 30px;
-						width: 100px;
-						margin-right: 12px;
-						font-family: "Shentox";
-						font-size: 15px;
-						text-align: center;
-						line-height: 32px;
-						border: 1px solid #fff;
-						border-radius: 4px;
-					}
-					.system-selection .selection-button
-					{
-						display: inline-block;
-						height: 25px;
-						width: 25px;
-						margin-left: 4px;
-						overflow: hidden;
-						text-indent: -9999px;
-					}
-					.system-selection .selection-button.os-android
-					{
-						background-image: url(assets/images/google-playstore-icon.png);
-						background-repeat: no-repeat;
-						background-size: 20px;
-						background-position: center;
-					}
-					.system-selection .selection-button.os-windows
-					{
-						background-image: url(assets/images/windows-icon.png);
-						background-repeat: no-repeat;
-						background-size: 20px;
-						background-position: center;
-					}
-					/*Top Download - Styling*/
-					/*Featured Download - Styling*/
-					.featured-download.news-content .news-item
-					{
-						position: absolute;
-					}
-					.featured-download .news-item
-					{
-						opacity: 0;
-						left: 200px;
-						-webkit-transition: 0.3s;
-						transition: 0.3s;
-					}
-					.featured-download .news-item.active
-					{
-						opacity: 1;
-						left: 0;
-					}
-					.featured-download.news-content
-					{
-						position: relative;
-						height: 64px;
-						margin-top: 20px;
-						overflow: hidden;
-					}
-					.featured-download .news-image
-					{
-						position: absolute;
-						left: 0;
-						top: 0;
-						width: 64px;
-						height: 64px;
-						text-align:center;
-						overflow:hidden;
-					}
-					.featured-download .news-image img
-					{
-						height: 100%;
-						margin: 0 -100%;
-					    vertical-align: top;
-					    position: relative;
-					    z-index: 0;
-					    -webkit-transform-origin: center;
-					    transform-origin: center;
-					    -webkit-transition: 0.4s;
-					    transition: 0.4s;
-					}
-					.featured-download.news-content .news-item .news-detail
-					{
-						height: 64px;
-						padding-left: 80px;
-						padding-right: 10px;
-						box-sizing: border-box;
-					}
-					.featured-download.news-content .news-item .news-detail .title
-					{
-						height: 32px;
-						font-family: "Open Sans";
-						font-size: 14px;
-						line-height: 32px;
-						font-weight: 600;
-					}
-					.featured-download .news-detail .rating
-					{
-						position: relative;
-						display: inline-block;
-						vertical-align: top;
-						width: 90px;
-						height: 18px;
-						margin-right: 10px;
-						overflow: hidden;
-					}
-					.featured-download .news-detail .filesize
-					{
-						display: inline-block;
-						vertical-align: top;
-						height: 18px;
-						font-family: "Open Sans";
-						font-size: 13px;
-						line-height: 18px;
-						padding-left: 10px;
-						border-left: 1px solid #ddd;
-					}
-					.featured-download .news-detail .rating .empty-score, .featured-download .news-detail .rating .fill-score
-					{
-						position: absolute;
-						left: 0;
-						top: 0;
-						right: 0;
-						bottom: 0;
-						background-image: url(assets/images/star-empty.png);
-						background-size: 18px;
-						background-repeat: repeat-x;
-						background-position: left center;
-						width: 100%;
-						z-index: 1;
-					}
-					.featured-download .news-detail .rating .fill-score
-					{
-						width: 0;
-						background-image: url(assets/images/star-fill.png);
-						z-index: 5;
-					}
-					/*Featured Download - Styling*/
-					</style>
 					<div class="top-download news-content">
 						<div class="news-title color white">
 							Top Download
@@ -2650,6 +2929,18 @@
 								</div>
 								<div class="filesize color gray">
 									768 MB
+								</div>
+								<div class="download-now">
+									<div class="download">
+										<a href="#" class="link-overlay color white">
+											UNDUH
+										</a>
+									</div>
+									<div class="detail">
+										<a href="#" class="link-overlay color gray">
+											DETAIL
+										</a>
+									</div>
 								</div>
 							</div>
 							<div class="clear"></div>
@@ -2715,27 +3006,235 @@
 							<div class="clear"></div>
 						</div>
 					</div>
-					<div class="top-download-list">
-						<div class="news-item active" data-system="windows" data-type="apps">
+					<div class="top-download-list news-content">
+						<div class="news-item">
 							<div class="news-image">
 								<img src="assets/images/msword-icon.png">
 							</div>
 							<div class="news-detail">
-								<div class="title color black">
-									Windows Apps
-								</div>
-								<div class="rating">
-									<div class="fill-score" style="width: 80%">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										1.
 									</div>
-									<div class="empty-score">
+									<div class="title color black">
+											Microsoft Office Word 2016
 									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
 								</div>
-								<div class="filesize color gray">
-									768 MB
-								</div>
+								<div class="clear"></div>
 							</div>
 							<div class="clear"></div>
 						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										2.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										3.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										4.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										5.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										6.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										7.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										8.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										9.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<a href="#" class="link-overlay">
+									<div class="ranking color gray">
+										10.
+									</div>
+									<div class="title color black">
+											Microsoft Office Word 2016
+									</div>
+								</a>
+								<div class="download-now">
+									<a href="#" class="link-overlay">
+									</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-loading">
+							<div class="loader color white">
+								Lebih Banyak
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="langganan news-content">
+						<div class="news-title color white">
+							Langganan Artikel
+						</div>
+						<div class="news-detail color white">
+							Temukan Tips dan Berita menarik setiap harinya. GRATIS!
+						</div>
+						<div class="email-langganan">
+							<input type="text" placeholder="Alamat Email...">
+						</div>
+						<input type="button" class="submit color white" value="LANGGANAN">
 					</div>
 					<script>
 					$(document).on("click", ".selection-button", function(e)
@@ -2765,4 +3264,4 @@
 		</div>
 	</div>
 </body>
-</html>
+</html>	
