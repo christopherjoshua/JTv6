@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css">
+    <script src="assets/scripts/jquery-2.x.min.js"></script>
 </head>
 <body>
 	<style>
@@ -480,6 +481,10 @@
 	.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title
 	{
 		-webkit-line-clamp : 2;
+	}
+	.featured-download .news-detail .title
+	{
+		-webkit-line-clamp : 1;
 	}
 	.news-detail .title:after
 	{
@@ -1052,7 +1057,7 @@
 	/*Sidebar - IMPORTANT*/
 	/*Populer Hari ini - IMPORTANT*/
 	
-	.sidebar-content .news-content:before
+	.sidebar-content .populer-hari-ini.news-content:before
 	{
 		position: absolute;
 		content: "";
@@ -1063,7 +1068,7 @@
 		background-color: #ce0a46;
 		z-index: 1;
 	}
-	.sidebar-content .news-title
+	.sidebar-content .populer-hari-ini .news-title
 	{
 		position: relative;
 		display: inline-block;
@@ -2418,6 +2423,343 @@
 						</div>
 						<div class="clear"></div>
 					</div>
+					<style>
+					/*Top Download - IMPORTANT*/
+					.top-download.news-content
+					{
+						width: 300px;
+						height: 110px;
+						padding: 20px;
+						background: #ce0a46;
+						background: -webkit-linear-gradient(15deg, #ce0a46 , #e98125);
+						background: -o-linear-gradient(15deg, #ce0a46, #e98125);
+						background: -moz-linear-gradient(15deg, #ce0a46, #e98125);
+						background: linear-gradient(15deg, #ce0a46 , #e98125);
+						border-radius: 5px;
+						box-sizing: border-box;
+					}
+					/*Top Download - IMPORTANT*/
+					/*Top Download - Styling*/
+					.top-download .news-title
+					{
+						font-family: "Open Sans";
+						font-size: 22px;
+						line-height: 15px;
+						font-weight: 500;
+					}
+					.type-selection
+					{
+						position: absolute;
+						bottom: 20px;
+						left: 20px;
+					}
+					.system-selection
+					{
+						position: absolute;
+						right: 20px;
+						top: 20px;
+					}
+					.selection-button
+					{
+						opacity: 0.5;
+						-webkit-transition: 0.2s;
+						transition: 0.2s;
+						text-decoration: none;
+					}
+					.selection-button.active
+					{
+						opacity: 1;
+					}
+					.type-selection .selection-button
+					{
+						display: inline-block;
+						height: 30px;
+						width: 100px;
+						margin-right: 12px;
+						font-family: "Shentox";
+						font-size: 15px;
+						text-align: center;
+						line-height: 32px;
+						border: 1px solid #fff;
+						border-radius: 4px;
+					}
+					.system-selection .selection-button
+					{
+						display: inline-block;
+						height: 25px;
+						width: 25px;
+						margin-left: 4px;
+						overflow: hidden;
+						text-indent: -9999px;
+					}
+					.system-selection .selection-button.os-android
+					{
+						background-image: url(assets/images/google-playstore-icon.png);
+						background-repeat: no-repeat;
+						background-size: 20px;
+						background-position: center;
+					}
+					.system-selection .selection-button.os-windows
+					{
+						background-image: url(assets/images/windows-icon.png);
+						background-repeat: no-repeat;
+						background-size: 20px;
+						background-position: center;
+					}
+					/*Top Download - Styling*/
+					/*Featured Download - Styling*/
+					.featured-download.news-content .news-item
+					{
+						position: absolute;
+					}
+					.featured-download .news-item
+					{
+						opacity: 0;
+						left: 200px;
+						-webkit-transition: 0.3s;
+						transition: 0.3s;
+					}
+					.featured-download .news-item.active
+					{
+						opacity: 1;
+						left: 0;
+					}
+					.featured-download.news-content
+					{
+						position: relative;
+						height: 64px;
+						margin-top: 20px;
+						overflow: hidden;
+					}
+					.featured-download .news-image
+					{
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 64px;
+						height: 64px;
+						text-align:center;
+						overflow:hidden;
+					}
+					.featured-download .news-image img
+					{
+						height: 100%;
+						margin: 0 -100%;
+					    vertical-align: top;
+					    position: relative;
+					    z-index: 0;
+					    -webkit-transform-origin: center;
+					    transform-origin: center;
+					    -webkit-transition: 0.4s;
+					    transition: 0.4s;
+					}
+					.featured-download.news-content .news-item .news-detail
+					{
+						height: 64px;
+						padding-left: 80px;
+						padding-right: 10px;
+						box-sizing: border-box;
+					}
+					.featured-download.news-content .news-item .news-detail .title
+					{
+						height: 32px;
+						font-family: "Open Sans";
+						font-size: 14px;
+						line-height: 32px;
+						font-weight: 600;
+					}
+					.featured-download .news-detail .rating
+					{
+						position: relative;
+						display: inline-block;
+						vertical-align: top;
+						width: 90px;
+						height: 18px;
+						margin-right: 10px;
+						overflow: hidden;
+					}
+					.featured-download .news-detail .filesize
+					{
+						display: inline-block;
+						vertical-align: top;
+						height: 18px;
+						font-family: "Open Sans";
+						font-size: 13px;
+						line-height: 18px;
+						padding-left: 10px;
+						border-left: 1px solid #ddd;
+					}
+					.featured-download .news-detail .rating .empty-score, .featured-download .news-detail .rating .fill-score
+					{
+						position: absolute;
+						left: 0;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						background-image: url(assets/images/star-empty.png);
+						background-size: 18px;
+						background-repeat: repeat-x;
+						background-position: left center;
+						width: 100%;
+						z-index: 1;
+					}
+					.featured-download .news-detail .rating .fill-score
+					{
+						width: 0;
+						background-image: url(assets/images/star-fill.png);
+						z-index: 5;
+					}
+					/*Featured Download - Styling*/
+					</style>
+					<div class="top-download news-content">
+						<div class="news-title color white">
+							Top Download
+						</div>
+						<div class="type-selection">
+							<a href="javascript:;" data-selection="type" data-value="apps" class="selection-button color white active">
+								APPS
+							</a>
+							<a href="javascript:;" data-selection="type" data-value="games" class="selection-button color white">
+								GAMES
+							</a>
+						</div>
+						<div class="system-selection">
+							<a href="javascript:;" data-selection="system" data-value="windows" class="selection-button os-windows active">
+								windows
+							</a>
+							<a href="javascript:;" data-selection="system" data-value="android" class="selection-button os-android">
+								android
+							</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="featured-download news-content">
+						<div class="news-item active" data-system="windows" data-type="apps">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<div class="title color black">
+									Windows Apps
+								</div>
+								<div class="rating">
+									<div class="fill-score" style="width: 80%">
+									</div>
+									<div class="empty-score">
+									</div>
+								</div>
+								<div class="filesize color gray">
+									768 MB
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item" data-system="windows" data-type="games">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<div class="title color black">
+									Windows Games
+								</div>
+								<div class="rating">
+									<div class="fill-score" style="width: 80%">
+									</div>
+									<div class="empty-score">
+									</div>
+								</div>
+								<div class="filesize color gray">
+									768 MB
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item" data-system="android" data-type="apps">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<div class="title color black">
+									Android Apps
+								</div>
+								<div class="rating">
+									<div class="fill-score" style="width: 80%">
+									</div>
+									<div class="empty-score">
+									</div>
+								</div>
+								<div class="filesize color gray">
+									768 MB
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="news-item" data-system="android" data-type="games">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<div class="title color black">
+									Android Games
+								</div>
+								<div class="rating">
+									<div class="fill-score" style="width: 80%">
+									</div>
+									<div class="empty-score">
+									</div>
+								</div>
+								<div class="filesize color gray">
+									768 MB
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="top-download-list">
+						<div class="news-item active" data-system="windows" data-type="apps">
+							<div class="news-image">
+								<img src="assets/images/msword-icon.png">
+							</div>
+							<div class="news-detail">
+								<div class="title color black">
+									Windows Apps
+								</div>
+								<div class="rating">
+									<div class="fill-score" style="width: 80%">
+									</div>
+									<div class="empty-score">
+									</div>
+								</div>
+								<div class="filesize color gray">
+									768 MB
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<script>
+					$(document).on("click", ".selection-button", function(e)
+					{
+						var o = $(this);
+						var d = o.data("selection");
+						$("."+d+"-selection .selection-button").removeClass("active");
+						o.addClass("active");
+						var q = $(".type-selection .selection-button.active").data("value");
+						var w = $(".system-selection .selection-button.active").data("value");
+						$.each($(".featured-download .news-item"), function(key, val)
+						{
+							var j = $(this);
+							if(j.data("system") == w)
+							{
+								if(j.data("type") == q)
+								{
+									$(".featured-download .news-item").removeClass("active");
+									j.addClass("active")
+								}
+							}
+						});
+					});
+					</script>
 				</div>
 			</div>
 		</div>
