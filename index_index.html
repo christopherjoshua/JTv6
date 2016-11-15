@@ -443,12 +443,12 @@
 	{
 		background-color: rgba(125,55,0,0.25);
 	}
-	.news-image:before
+	.featured-news  .news-image:before
 	{
-		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
-		background: -o-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
-		background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
-		background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5), transparent);
+		background: -o-linear-gradient(top, rgba(0,0,0,0.5), transparent);
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.5), transparent);
+		background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
 	}
 	.featured-news .news-image:hover:after
 	{
@@ -478,11 +478,11 @@
 		text-overflow      : ellipsis;
 		padding            : 0 !important;
 	}
-	.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title, .top-download-list .news-detail .title
+	.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title
 	{
 		-webkit-line-clamp : 2;
 	}
-	.featured-download .news-detail .title
+	.featured-download .news-detail .title, .top-download-list .news-detail .title
 	{
 		-webkit-line-clamp : 1;
 	}
@@ -780,6 +780,13 @@
 		bottom: 0;
 		content: "";
 	}
+	.paling-laris .news-image:before, .paling-unik .news-image:before
+	{
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -o-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+	}
 	.paling-laris .news-item:nth-child(2) .news-detail, .paling-unik .news-item:nth-child(2) .news-detail
 	{
 		font-family: "Roboto";
@@ -826,6 +833,13 @@
 		text-align:center;
 		line-height:200px;
 		overflow:hidden;
+	}
+	.paling-disukai .news-image:before
+	{
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -o-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
+		background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, transparent 80%, rgba(0,0,0,0.5) 100%);
 	}
 	.paling-disukai .news-item .news-detail {
 		position: absolute;
