@@ -560,7 +560,13 @@
 		font-size: 15px;
 		line-height: 20px;
 		font-weight: 500;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
 	} 
+	.banyak-dibicarakan .news-item:hover .title
+	{
+		color: #ce0a46;
+	}
 	/*Banyak Dibicarakan - Styling*/
 	/*Wajib Coba - IMPORTANT*/
 	.wajib-coba .news-item
@@ -1033,6 +1039,169 @@
 		100% { transform: rotate(360deg);}
 	}
 	/*Loading - Styling*/
+	/*Sidebar - IMPORTANT*/
+	.sidebar-content
+	{
+	    position: absolute;
+	    width: 340px;
+	    right: 0;
+	    top: 0;
+	    padding: 20px;
+	    box-sizing: border-box;
+	}
+	/*Sidebar - IMPORTANT*/
+	/*Populer Hari ini - IMPORTANT*/
+	
+	.sidebar-content .news-content:before
+	{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		height: 32px;
+		width: 5px;
+		background-color: #ce0a46;
+		z-index: 1;
+	}
+	.sidebar-content .news-title
+	{
+		position: relative;
+		display: inline-block;
+		font-family: "Shentox";
+		font-size: 22px;
+		padding-left: 20px;
+		background-color: #fff;
+	}
+	.populer-hari-ini .news-item
+	{
+		position: relative;
+		height: 60px;
+		margin-bottom: 20px;
+	}
+	.populer-hari-ini .news-item .news-image
+	{
+		width: 60px;
+		height: 60px;
+	}
+	/*Populer Hari ini - IMPORTANT*/
+	/*Populer Hari ini - Styling*/
+	.populer-hari-ini .news-title
+	{
+		height: 32px;
+		line-height: 34px;
+		font-weight: 500;
+	}
+	.populer-hari-ini .news-detail .news-date
+	{
+		position: absolute;
+		left: 80px;
+		bottom: 0px;
+	}
+	.populer-hari-ini .news-detail .date
+	{
+		font-family: "Open Sans";
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.populer-hari-ini .news-detail
+	{
+		padding-left: 80px;
+		padding-right: 5px;
+		height: 60px;
+	}
+	.populer-hari-ini .news-detail .title
+	{
+		font-family: "Open Sans";
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 20px;
+		-webkit-transition: 0.2s;
+		transition: 0.2s;
+	}
+	.populer-hari-ini .news-detail:hover .title
+	{
+		color: #ce0a46;
+	}
+	.populer-hari-ini .news-item .news-image 
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 60px;
+		width: 60px;
+		text-align:center;
+		line-height:200px;
+		overflow:hidden;
+	}
+	.populer-hari-ini .news-item .news-image img 
+	{
+		height: 100%;
+		width: 100%;
+		margin: 0 -100%;
+	    vertical-align: top;
+	    position: relative;
+	    z-index: -1;
+	}
+	.populer-hari-ini .news-item .ranking
+	{
+		position: absolute;
+		left: -15px;
+		top: 13px;
+		width: 30px;
+		height: 30px;
+		content: "1";
+		color: #fff;
+		font-family: "Shentox";
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 32px;
+		text-align: center;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		background-color: #000;
+		z-index: 10;
+	}
+	.populer-hari-ini .news-item:nth-child(1) .ranking
+	{
+		background-color: #ce0a46;
+	}
+	.populer-hari-ini .news-item:nth-child(2) .ranking
+	{
+		background-color: #cf1044;
+	}
+	.populer-hari-ini .news-item:nth-child(3) .ranking
+	{
+		background-color: #d4233f;
+	}
+	.populer-hari-ini .news-item:nth-child(4) .ranking
+	{
+		background-color: #d8343a;
+	}
+	.populer-hari-ini .news-item:nth-child(5) .ranking
+	{
+		background-color: #dc4735;
+	}
+	.populer-hari-ini .news-item:nth-child(6) .ranking
+	{
+		background-color: #df5332;
+	}
+	.populer-hari-ini .news-item:nth-child(7) .ranking
+	{
+		background-color: #e2632d;
+	}
+	.populer-hari-ini .news-item:nth-child(8) .ranking
+	{
+		background-color: #e56e2a;
+	}
+	.populer-hari-ini .news-item:nth-child(9) .ranking
+	{
+		background-color: #e77828;
+	}
+	.populer-hari-ini .news-item:nth-child(10) .ranking
+	{
+		background-color: #e98025;
+	}
+	/*Populer Hari ini - Styling*/
 	</style>
 	<div class="root" id="root">
 		<div class="jalantikus-menu-bar">
@@ -2026,106 +2195,6 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-				<style>
-				/*Sidebar - IMPORTANT*/
-				.sidebar-content
-				{
-				    position: absolute;
-				    width: 340px;
-				    right: 0;
-				    top: 0;
-				    padding: 20px;
-				    box-sizing: border-box;
-				}
-				/*Sidebar - IMPORTANT*/
-				/*Populer Hari ini - IMPORTANT*/
-				
-				.sidebar-content .news-content:before
-				{
-					position: absolute;
-					content: "";
-					top: 0;
-					left: 0;
-					height: 32px;
-					width: 5px;
-					background-color: #ce0a46;
-					z-index: 1;
-				}
-				.sidebar-content .news-title
-				{
-					position: relative;
-					display: inline-block;
-					font-family: "Shentox";
-					font-size: 22px;
-					padding-left: 20px;
-					background-color: #fff;
-				}
-				.populer-hari-ini .news-item
-				{
-					position: relative;
-					height: 60px;
-					margin-bottom: 20px;
-				}
-				.populer-hari-ini .news-item .news-image
-				{
-					width: 60px;
-					height: 60px;
-				}
-				/*Populer Hari ini - IMPORTANT*/
-				/*Populer Hari ini - Styling*/
-				.populer-hari-ini .news-title
-				{
-					height: 32px;
-					line-height: 34px;
-					font-weight: 500;
-				}
-				.populer-hari-ini .news-detail .news-date
-				{
-					position: absolute;
-					left: 80px;
-					bottom: 0px;
-				}
-				.populer-hari-ini .news-detail .date
-				{
-					font-family: "Open Sans";
-					font-size: 12px;
-					line-height: 18px;
-				}
-				.populer-hari-ini .news-detail
-				{
-					padding-left: 80px;
-					padding-right: 5px;
-					height: 60px;
-				}
-				.populer-hari-ini .news-detail .title
-				{
-					font-family: "Open Sans";
-					font-size: 13px;
-					font-weight: 600;
-					line-height: 20px;
-				}
-				.populer-hari-ini .news-item .news-image 
-				{
-					position: absolute;
-					left: 0;
-					top: 0;
-					height: 60px;
-					width: 60px;
-					text-align:center;
-					line-height:200px;
-					overflow:hidden;
-				}
-				.populer-hari-ini .news-item .news-image img 
-				{
-					height: 100%;
-					width: 100%;
-					margin: 0 -100%;
-				    vertical-align: top;
-				    position: relative;
-				    z-index: -1;
-				}
-				/*Populer Hari ini - Styling*/
-				</style>
 				<div class="sidebar-content">
 					<div class="ad-300-container">
 						<img src="assets/images/example-ad-square.png">
@@ -2149,6 +2218,198 @@
 												3 jam yang lalu
 											</div>
 										</div>
+									</div>
+									<div class="ranking">
+										1
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										2
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										3
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										4
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										5
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										6
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										7
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										8
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										9
+									</div>
+								</a>
+								<div class="clear"></div>
+							</div>
+							<div class="news-item">
+								<a href="#" class="link-overlay">
+									<div class="news-image software">
+										<img src="assets/Banner/samsung-vs-apple.jpeg">
+									</div>
+									<div class="news-detail">
+										<div class="title color black">
+											Harga 2 Jutaan Smartphone ini Punya RAM 4GB, Fingerprint dan Storage Sebesar 64 GB
+										</div>
+										<div class="news-date">
+											<div class="date color gray">
+												3 jam yang lalu
+											</div>
+										</div>
+									</div>
+									<div class="ranking">
+										10
 									</div>
 								</a>
 								<div class="clear"></div>
