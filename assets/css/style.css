@@ -112,7 +112,7 @@ html, body
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-image: url(assets/images/jalantikus-logo-white.png);
+	background-image: url(../images/jalantikus-logo-white.png);
 	background-size: 200px;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -124,8 +124,8 @@ html, body
 	position: absolute;
 	right: 10px;
 	top: 0;
-	-webkit-mask-image: url(assets/images/search.png);
-	mask-image: url(assets/images/search.png);
+	-webkit-mask-image: url(../images/search.png);
+	mask-image: url(../images/search.png);
 	-webkit-mask-size: 24px 24px;
 	mask-size: 24px 24px;
 	-webkit-mask-repeat: no-repeat;
@@ -449,7 +449,7 @@ html, body
 	-webkit-transition:0.2s;
 	transition:0.2s;
 }
-.news-detail .title
+.news-detail .title, .populer-hari-ini .news-detail .title
 {
 	position: relative;
 	-webkit-line-clamp : 3;
@@ -461,7 +461,7 @@ html, body
 	text-overflow      : ellipsis;
 	padding            : 0 !important;
 }
-.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .populer-hari-ini .news-detail .title
+.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title
 {
 	-webkit-line-clamp : 2;
 }
@@ -629,7 +629,7 @@ html, body
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url(assets/images/star-empty.png);
+	background-image: url(../images/star-empty.png);
 	background-size: 18px;
 	background-repeat: repeat-x;
 	width: 100%;
@@ -638,7 +638,7 @@ html, body
 .wajib-coba .news-detail .rating .fill-score
 {
 	width: 0;
-	background-image: url(assets/images/star-fill.png);
+	background-image: url(../images/star-fill.png);
 	z-index: 5;
 }
 /*Wajib Coba - Styling*/
@@ -960,7 +960,7 @@ html, body
 	left: 0;
 	top: 1px;
 	bottom: 0;
-	background-image: url(assets/images/time-icon.png);
+	background-image: url(../images/time-icon.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15px;
@@ -1009,7 +1009,7 @@ html, body
 {
 	height: 100%;
 	width: 100%;
-	background-image: url(assets/images/loading.png);
+	background-image: url(../images/loading.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -1142,14 +1142,14 @@ html, body
 }
 .populer-hari-ini .news-detail .news-date
 {
-	position: absolute;
-	left: 80px;
-	bottom: 0px;
+	position: relative;
+	display: inline-block;
 }
 .populer-hari-ini .news-detail .date
 {
 	font-family: "Open Sans";
 	font-size: 12px;
+	font-weight: 500;
 	line-height: 18px;
 }
 .populer-hari-ini .news-detail
@@ -1321,14 +1321,14 @@ html, body
 }
 .system-selection .selection-button.os-android
 {
-	background-image: url(assets/images/google-playstore-icon.png);
+	background-image: url(../images/google-playstore-icon.png);
 	background-repeat: no-repeat;
 	background-size: 20px;
 	background-position: center;
 }
 .system-selection .selection-button.os-windows
 {
-	background-image: url(assets/images/windows-icon.png);
+	background-image: url(../images/windows-icon.png);
 	background-repeat: no-repeat;
 	background-size: 20px;
 	background-position: center;
@@ -1474,7 +1474,7 @@ html, body
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url(assets/images/star-empty.png);
+	background-image: url(../images/star-empty.png);
 	background-size: 18px;
 	background-repeat: repeat-x;
 	background-position: left center;
@@ -1484,7 +1484,7 @@ html, body
 .featured-download .news-detail .rating .fill-score
 {
 	width: 0;
-	background-image: url(assets/images/star-fill.png);
+	background-image: url(../images/star-fill.png);
 	z-index: 5;
 }
 /*Featured Download - Styling*/
@@ -1568,8 +1568,8 @@ html, body
 	right: 0px;
 	width: 40px;
 	height: 40px;
-	-webkit-mask-image: url(assets/images/cloud-icon.png);
-	mask-image: url(assets/images/cloud-icon.png);
+	-webkit-mask-image: url(../images/cloud-icon.png);
+	mask-image: url(../images/cloud-icon.png);
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
 	-webkit-mask-size: 24px;
@@ -1646,8 +1646,8 @@ html, body
 	bottom: 12px;
 	left: 12px;
 	content: "";
-	-webkit-mask-image: url(assets/images/mail-icon.png);
-	mask-image: url(assets/images/mail-icon.png);
+	-webkit-mask-image: url(../images/mail-icon.png);
+	mask-image: url(../images/mail-icon.png);
 	-webkit-mask-size: 16px 16px;
 	mask-size: 16px 16px;
 	-webkit-mask-repeat: no-repeat;
