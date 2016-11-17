@@ -328,6 +328,10 @@ html, body
 {
 	color: #b2b2b2;
 }
+.color.red
+{
+	color: #cd201f;
+}
 .color.deepgray
 {
 	color: #525252;
@@ -352,6 +356,7 @@ html, body
 	max-width: 1326px;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 20px;
 	background-color: #fff;
 	min-height: 200px;
 	padding-right: 340px;
@@ -461,7 +466,7 @@ html, body
 	text-overflow      : ellipsis;
 	padding            : 0 !important;
 }
-.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title
+.featured-news .news-detail .title, .paling-laris .news-item:nth-child(1) .news-detail .title, .paling-laris .news-item:nth-child(2) .news-detail .title, .paling-unik .news-item:nth-child(1) .news-detail .title, .paling-unik .news-item:nth-child(2) .news-detail .title , .paling-disukai .news-item:first-child .news-detail .title, .wajib-nonton  .news-detail .title
 {
 	-webkit-line-clamp : 2;
 }
@@ -1047,6 +1052,7 @@ html, body
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
 	background-color: #ce0a46;
 	border-radius: 4px;
 }
@@ -1100,7 +1106,6 @@ html, body
 }
 /*Sidebar - IMPORTANT*/
 /*Populer Hari ini - IMPORTANT*/
-
 .sidebar-content .populer-hari-ini.news-content:before
 {
 	position: absolute;
@@ -1151,6 +1156,19 @@ html, body
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 18px;
+}
+.populer-hari-ini .news-detail .date:after
+{
+	position: absolute;
+	width: 30px;
+	height: 18px;
+	left: -30px;
+	top: 0;
+	content: "";
+	background: -webkit-linear-gradient(right, rgba(255, 255, 255, 1), transparent);
+	background: -o-linear-gradient(left, rgba(255, 255, 255, 1), transparent);
+	background: -moz-linear-gradient(left, rgba(255, 255, 255, 1), transparent);
+	background: linear-gradient(to left, rgba(255, 255, 255, 1), transparent);
 }
 .populer-hari-ini .news-detail
 {
@@ -1544,7 +1562,7 @@ html, body
 {
     position: absolute;
 	max-height: 40px;
-	max-width: 180px;
+	width: 200px;
     top: 50%;
     left: 80px;
 	font-family: "Open Sans";
@@ -1557,6 +1575,20 @@ html, body
     -webkit-transition: 0.2s;
     transition: 0.2s;
 }
+.top-download-list .news-item .news-detail .download-now:after
+{
+	position: absolute;
+	width: 20px;
+	height: 40px;
+	left: -20px;
+	top: 0;
+	content: "";
+	background: -webkit-linear-gradient(right, rgba(255, 255, 255, 1), transparent);
+	background: -o-linear-gradient(left, rgba(255, 255, 255, 1), transparent);
+	background: -moz-linear-gradient(left, rgba(255, 255, 255, 1), transparent);
+	background: linear-gradient(to left, rgba(255, 255, 255, 1), transparent);
+	z-index: 9;
+}
 .top-download-list .news-item .news-detail .title:hover
 {
 	color: #ce0a46;
@@ -1568,6 +1600,20 @@ html, body
 	right: 0px;
 	width: 40px;
 	height: 40px;
+	background-color: #fff;
+	opacity: 0;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	z-index: 4;
+}
+.top-download-list .news-item .news-detail .download-now:before
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	content: "";
 	-webkit-mask-image: url(../images/cloud-icon.png);
 	mask-image: url(../images/cloud-icon.png);
 	-webkit-mask-repeat: no-repeat;
@@ -1577,7 +1623,6 @@ html, body
 	-webkit-mask-position: center;
 	mask-position: center;
 	background-color: #ddd;
-	opacity: 0;
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
 	z-index: 1;
@@ -1586,11 +1631,154 @@ html, body
 {
 	opacity: 1;
 }
-.top-download-list .news-item .news-detail .download-now:hover
+.top-download-list .news-item .news-detail .download-now:hover:before
 {
 	background-color: #ce0a46;
 }
 /*Top Download List - Styling*/
+/*Wajib Nonton - IMPORTANT*/
+.sidebar-content .wajib-nonton.news-content:before
+{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	height: 32px;
+	width: 5px;
+	background-color: #ce0a46;
+	z-index: 1;
+}
+.sidebar-content .wajib-nonton .news-title
+{
+	position: relative;
+	display: inline-block;
+	font-family: "Shentox";
+	font-size: 22px;
+	padding-left: 20px;
+	background-color: #fff;
+}
+.wajib-nonton .news-item
+{
+	position: relative;
+	height: 270px;
+	margin-bottom: 20px;
+	border: 1px solid #e9e9e9;
+	box-shadow: 0 1px 5px #ddd;
+}
+/*Wajib Nonton - IMPORTANT*/
+/*Wajib Nonton - Styling*/
+.wajib-nonton .news-title
+{
+	height: 32px;
+	line-height: 34px;
+	font-weight: 500;
+}
+.wajib-nonton .watch-youtube, .wajib-nonton .news-detail .news-date
+{
+	font-family: "Open Sans";
+	font-size: 10px;
+	line-height: 16px;
+	border-bottom: 1px solid transparent;
+}
+.wajib-nonton .news-detail .news-date
+{
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+}
+.wajib-nonton .watch-youtube
+{
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	text-decoration: none;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	z-index: 9
+}
+.wajib-nonton .watch-youtube:hover
+{
+	border-bottom: 1px solid #cd201f;
+}
+.wajib-nonton .news-detail
+{
+	padding: 20px;
+	height: 100px;
+	box-sizing: border-box;
+}
+.wajib-nonton .news-detail .title
+{
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+.wajib-nonton .news-item:hover .title
+{
+	color: #ce0a46;
+}
+.wajib-nonton .news-item .news-image 
+{
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 170px;
+	width: 100%;
+	text-align:center;
+	line-height:200px;
+	overflow:hidden;
+}
+.wajib-nonton .news-image:before, .wajib-nonton .news-image:after
+{
+	content:"";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition:0.2s;
+	transition:0.2s;
+	z-index: 1
+}
+.wajib-nonton .news-item .news-image:after
+{
+	-webkit-mask-image: url(../images/youtube.png);
+	mask-image: url(../images/youtube.png);
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	background-color: #fff;
+	opacity: 0.6;
+}
+.wajib-nonton .news-item:hover .news-image:after
+{
+	background-color: #cd201f;
+	opacity: 0.8;
+}
+.wajib-nonton .news-item .news-image:before
+{
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.7), transparent);
+	background: -o-linear-gradient(top, rgba(0,0,0,0.7), transparent);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.7), transparent);
+	background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.wajib-nonton .news-item:hover .news-image:before
+{
+	opacity: 0.2;
+}
+.wajib-nonton .news-item .news-image img 
+{
+	height: 100%;
+	width: 100%;
+	margin: 0 -100%;
+    vertical-align: top;
+    position: relative;
+}
+/*Populer Hari ini - Styling*/
 /*Langganan - IMPORTANT*/
 .langganan.news-content
 {
@@ -1671,3 +1859,283 @@ html, body
 	cursor: pointer;
 }
 /*Langganan - Styling*/
+/*Footer - IMPORTANT*/
+.footer
+{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 300px;
+	background-color: #2d2d2d;
+}
+.footer:before
+{
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: "";
+	background-image: url(../images/footer-background.png);
+	opacity: 0.4;
+}
+.footer .foot-content
+{
+	width: 1366px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+    box-sizing: border-box;
+}
+/*Footer - IMPORTANT*/
+/*Footer - Styling*/
+.footer .foot-content .jalantikus-connect
+{
+	width: 250px;
+	padding-right: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	float: left;
+	border-right: 1px solid #505050;
+	box-sizing: border-box;
+}
+.footer .foot-content .jalantikus-connect img
+{
+	max-width: 100%;
+}
+.footer .foot-content .jalantikus-connect .jalantikus-connect-link
+{
+	text-align: right;
+}
+.footer .foot-content .jalantikus-connect .jalantikus-connect-link h4
+{
+	padding-right: 20px;
+	font-family: "Shentox";
+	font-size: 14px;
+	font-weight: 300;
+	opacity: 0.6;
+}
+.footer .foot-content .jalantikus-connect .jalantikus-connect-link .connect-link
+{
+	position: relative;
+	height: 32px;
+	width: 32px;
+	float: right;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+.footer .foot-content .jalantikus-connect .jalantikus-connect-link .connect-link:hover
+{
+	opacity: 1;
+}
+.connect-link.facebook-link
+{
+	-webkit-mask-image: url(../images/facebook-logo.png);
+	mask-image: url(../images/facebook-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.twitter-link
+{
+	-webkit-mask-image: url(../images/twitter-logo.png);
+	mask-image: url(../images/twitter-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.instagram-link
+{
+	-webkit-mask-image: url(../images/instagram-logo.png);
+	mask-image: url(../images/instagram-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.rss-link
+{
+	-webkit-mask-image: url(../images/rss-logo.png);
+	mask-image: url(../images/rss-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.linkedin-link
+{
+	-webkit-mask-image: url(../images/linkedin-logo.png);
+	mask-image: url(../images/linkedin-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.youtube-link
+{
+	-webkit-mask-image: url(../images/youtube-logo.png);
+	mask-image: url(../images/youtube-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.googleplus-link
+{
+	-webkit-mask-image: url(../images/googleplus-logo.png);
+	mask-image: url(../images/googleplus-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.connect-link.bbm-link
+{
+	-webkit-mask-image: url(../images/bbm-logo.png);
+	mask-image: url(../images/bbm-logo.png);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 32px;
+	mask-size: 32px;
+	-webkit-mask-position: center;
+	mask-position: center;
+    background-color: white;
+    opacity: 0.6;
+}
+.footer .foot-content .jalantikus-about, .footer .foot-content .jalantikus-help, .footer .foot-content .jalantikus-secure, .footer .foot-content .jalantikus-copyright
+{
+	position: relative;
+	width: 230px;
+	padding-left: 50px;
+	float: left;
+	font-family: "Open Sans";
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.footer .foot-content .jalantikus-secure
+{
+	width: 300px;
+	height: 200px;
+}
+.footer .foot-content .jalantikus-copyright
+{
+	height: 200px;
+	padding-top: 80px;
+	float: right;
+	font-family: "Shentox";
+	text-align: right;
+}
+.footer .foot-content .jalantikus-about a, .footer .foot-content .jalantikus-help a, .footer .foot-content .jalantikus-secure a
+{
+	text-decoration: none;
+}
+.footer .foot-content .jalantikus-about p, .footer .foot-content .jalantikus-help p, .footer .foot-content .jalantikus-secure p, .footer .foot-content .jalantikus-copyright p
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	opacity: 0.6
+}
+.footer .foot-content .jalantikus-copyright p
+{
+	opacity: 1;
+}
+.footer .foot-content .jalantikus-about a:hover p, .footer .foot-content .jalantikus-help a:hover p, .footer .foot-content .jalantikus-secure a:hover p
+{
+	opacity: 1;
+}
+.jalantikus-newapp
+{
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	bottom: 0;
+	padding: 15px 0 15px 70px;
+	box-sizing: border-box;
+	background: #ce0a46;
+	background: -webkit-linear-gradient(left, #ce0a46 , #e98125);
+	background: -o-linear-gradient(right, #ce0a46, #e98125);
+	background: -moz-linear-gradient(right, #ce0a46, #e98125);
+	background: linear-gradient(to right, #ce0a46 , #e98125);
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+.jalantikus-newapp .subtitle
+{
+	font-family: "Open Sans";
+	font-size: 12px;
+	font-weight: 500;
+}
+.jalantikus-newapp .title
+{
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 700;
+}
+.jalantikus-newapp:after
+{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left: 0;
+	top: 0;
+	content: "";
+    background-image: url(../images/google-playstore-icon.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+.jalantikus-newapp:before
+{
+	position: absolute;
+	width: 100px;
+	height: 150px;
+	right: 10px;
+	bottom: 0;
+	content: "";
+    background-image: url(../Banner/app-preview.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+/*Footer - Styling*/
